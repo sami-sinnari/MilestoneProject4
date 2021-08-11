@@ -1,0 +1,155 @@
+[{
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+        "name": "AMD Ryzen 9 5900X",
+        "description": "12 Core with 24 Threads | 4.80GHz clock speed | 7nm FinFet Process | 64MBL3 Cache | Dual Channel DDR4 Controller | 3200-3600MHz RAM Recommended | 2 Year Warranty",
+        "price": 529.99,
+        "category": 1,
+        "image_url": "https://ibb.co/wCvrnwP",
+        "image": "AMDryzen95900x.jpg"
+    }
+}, {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+        "name": "Core i7-10700K Avengers Edition 3.8GHz ",
+        "description": "Hyper-Threading Technology | 8/16 Cores / Threads | 3.80GHz Clock Speed | 5.1GHz Single Core Max Turbo | 16mb Cache | 125W TDP | Dual Channel DDR4 Controller | 2 Year Warranty",
+        "price": 299.99,
+        "category": 1,
+        "image_url": "https://ibb.co/vmwrRWF",
+        "image": "Corei7-10700k.jpg"
+    }
+}, {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+        "name": "Ryzen 7 5800X Eight Core 4.7GHz (Socket AM4) Processor",
+        "description": "8 Core with 16 Threads | 4.70GHz clock speed | 7nm FinFet Process | 32MB L3 Cache | Dual Channel DDR4 Controller | 3200-3600MHz RAM Recommended | 2 Year Warranty",
+        "price": 382.99,
+        "category": 1,
+        "image_url": "https://ibb.co/k65PjRy",
+        "image": "AMDryzen7-5800x.jpg"
+    }
+}, {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+        "name": " Intel Core i5-11600K 3.90GHz",
+        "description": "6/12 Cores / Threads | 3.90GHz Clock Speed | 4.9GHz Single Core Max Turbo | 12mb Cache 125W | TDP Dual Channel DDR4 Controller | Onboard Graphics: Yes | 2 Year Warranty",
+        "price": 239.99,
+        "category": 1,
+        "image_url": "https://ibb.co/Smfj5hB",
+        "image": "Intel-corei5-11600k.jpg"
+    }
+}, {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+        "name": "GeForce RTX 3080 TUF Gaming OC 10GB GDDR6X PCI-Express",
+        "description": "TUF-RTX3080-O10G-GAMING | Boost Clock: 1815MHz | Memory 10GB 19000MHz GDDR6X | Cuda Cores: 8704 | VR Ready | NVIDIA Ampere | 2 Year Warranty",
+        "price": 661.35,
+        "category": 2,
+        "image_url": "https://ibb.co/D7p1kj7",
+        "image": "AsusGeForceRTX3080TUFGamingOC10GBGDDR6XPCI-ExpressGraphicsCard.jpg"
+    }
+}, {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+        "name": "Zotac GeForce RTX 3060 Twin Edge 12GB GDDR6",
+        "description": "Boost Clock: 1777MHz | Memory 12GB 15000MHz GDDR6 | Cuda Cores: 3584 | VR Ready  | NVIDIA Ampere | Real-Time Ray Tracing  | 2 Year Warranty",
+        "price": 787.99,
+        "category": 2,
+        "image_url": "https://ibb.co/k65PjRy",
+        "image": "ZotacGeForceRTX3060TwinEdge12GBGDDR6PCI-ExpressGraphicsCard.jpg"
+    }
+}, {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+        "name": "Radeon RX 6800 XT TUF Gaming",
+        "description": "Core Clock: 2090MHz  | Boost Clock: 2340MHz  | Memory: 16384MB 16000MHz GDDR6  | Stream Processors: 4608 |  Freesync 2 HDR support | DirectX 12 Support | 2 Year Warranty",
+        "price": 1230.00,
+        "category": 2,
+        "image_url": "https://ibb.co/h9cCpjX",
+        "image": "AsusRadeonRX6800XTTUFGamingOC16GGBGDDR6PCI-ExpressGraphicsCard.jpg"
+    }
+}, {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+        "name": "Kraken Z73 AIO CPU Water Cooler with LCD Screen",
+        "description": "AIO Cooler | RGB Control | Intel and AMD Socket Compatibility | Customizable Display | 2 Year Warranty",
+        "price": 249.95,
+        "category": 4,
+        "image_url": "https://ibb.co/S78C8t8",
+        "image": "NZXTKrakenZ73AIOCPUWaterCoolerwithLCDScreen-360mm.jpg"
+    }
+}, {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+        "name": "Corsair Hydro Series iCUE H150i Elite CAPELLIX RGB",
+        "description": "AIO Coole | 360mm | RGB Pump and Fans  | iCUE Software  | Compatible with most AMD and Intel | 2 Year Warranty",
+        "price": 179.99,
+        "category": 4,
+        "image_url": "https://ibb.co/T1FbmPQ",
+        "image": "CorsairHydroSeriesiCUEH150iEliteCAPELLIXRGB.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "name": "ROG Crosshair VIII Dark Hero",
+        "description": "Intel® Socket LGA 1200 for 11th Gen Intel® Core™ processors and 10th Gen Intel Core, Pentium® Gold and Celeron® processors.Optimised Thermal Design: Integrated EK water block that cools VRM, CPU and PCH; high-conductivity thermal pads, five M.2 heatsinks with embedded backplates and ROG Water-Cooling Zone.Fastest Gaming Connectivity: PCIe® 4.0, five M.2 slots, USB 3.2 Gen 2x2 front-panel connector, dual Thunderbolt™ 4 USB-C®.",
+        "price": 409.00,
+        "category": 3,
+        "image_url": "https://ibb.co/fNXbTGZ",
+        "image": "ASusRogVIIIDarkHero.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "name": "ROG Maximus XIII Extreme Glacial",
+        "description": "8 Core with 16 Threads | 4.70GHz clock speed | 7nm FinFet Process | 32MB L3 Cache | Dual Channel DDR4 Controller | 3200-3600MHz RAM Recommended | 2 Year Warranty",
+        "price": 1399.99,
+        "category": 3,
+        "image_url": "https://ibb.co/yk6k6sV",
+        "image": "ROGMaximusXIIIGlacial.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "name": "Lian Li O11 Dynamic Mini-S Midi-Tower",
+        "description": "The Lian Li O11D Mini ITX Case was developed in collaboration with celebrated overclocker, der8auer, and is now available in the stylish Snow Edition. This stunning, all white case was originally an exclusive competition prize and rereleased due to popular demand. Although it sports a new colour scheme, it still has the same modular, dynamic design as the O11 range. With configurable expansion slots, a dual chamber design, and adjustable pump heights, this case packs plenty of options for your gaming PC.",
+        "price": 101.99,
+        "category": 5,
+        "image_url": "https://ibb.co/J3GTqzw",
+        "image": "LianLiDynamicMini-S-Midi-Tower.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "name": "MOD5 Big-Tower Showcase, Tempered Glass - Grey ",
+        "description": "The Jonsbo MOD5 is an elaborately designed big tower, a true showcase with an an aerodynamic design and the possiblity to display hardware through its tinted tempered glass. With the option of installing several large radiators, this case is suitable for exclusive high-end builds. Compatible with up to 3x 3.5 / 2.5-inch and 1x 3.5-inch drives",
+        "price": 314.99,
+        "category": 5,
+        "image_url": "https://ibb.co/GsCLVRp",
+        "image": "JonsboMOD5Big-tower.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "name": "Raijintek NYX PRO Aluminium Full Tower",
+        "description": "Supports up to EEB / E-ATX Motherboards. With the NYX PRO , Raijintek presents a first-class showcase chassis. The NYX PRO has been developed with water cooling in mind and is ideal for Modders and Enthusiasts alike. The interior is divided into several chambers with plenty of space for many high-end components and a full custome water loop. The solid steel chassis is surrounded by aluminum and tempered glass panels, expansion cards are installed vertically.",
+        "price": 299.99,
+        "category": 5,
+        "image_url": "https://ibb.co/CBngVWy",
+        "image": "RajintekNYXPROFullTower.jpg"
+    }
+}]
