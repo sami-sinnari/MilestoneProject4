@@ -1,97 +1,93 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<!-- Jumbotron -->
+<div class="container jumbotron-section">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+        <h2>Chosen by experts with <br> a taste for quality</h2>
+        <p>Promoting the best components, chosen by a highly-trained builders, 
+            delivered to you directly within two to three days,
+            backed by a comprehensive 2-year warranty.
+            </p>
     </div>
-{% endblock %}
-
-{% block content %}
-    <div class="padding-15-em"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <!-- Product Categories -->
-                    <div class="row">
-                        <div class="col text-center">
-                            <h4>Find Components by Category<h4>
-                        </div>
-                    </div>
-                <div class="container category-container">
-                    <div class="row mb-5">
-                        <div class="col text-center category-btns">
-                            {% for c in current_categories %}
-                            <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                            <span class="btn-yellow">{{ c.friendly_name }}</span>
-                            </a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-1">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+    <div class="col-12 col-sm-6">
+      <img src="/media/AMDryzen7-5800x.jpg" class="rounded img-fluid" alt="Image picture">
     </div>
-{% endblock %}
+  </div>
+</div>
+
+<!-- Product Categories -->
+<section class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h4>Filter by Category</h4>
+    </div>
+  </div>
+<div class="container category-container">
+  <div class="row mb-5">
+    <div class="col text-center category-btns">
+      {% for c in current_categories %}
+      <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}" >
+        <span class="">{{ c.friendly_name }}</span>
+      </a>
+      {% endfor %}
+      <a class="category-badge text-decoration-none" href="{% url 'products' %}" >
+        <span class="btn-yellow">All Items</span>
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Products Content -->
+<div class="container">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+      <div class="card border-0">
+        <!-- Product Image -->
+        {% if product.image %}
+        <a href="{% url 'product_detail' product.id %}">
+          <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product_name }}"/>
+        </a>
+        {% else %}
+        <a href="{% url 'product_detail' product.id %}">
+          <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product_name }}"/>
+        </a>
+        {% endif %}
+      </div>
+
+      <!-- Card Body -->
+      <div class="card-body pl-0">
+        <a href="{% url 'product_detail' product.id %}">
+          <h4 class="card-title pb-0">{{ product.name }}</h4>
+        </a>
+        {% if product.category %}
+        <p class="product-category">
+          <a href="{% url 'products' %}?category={{ product.category.name }}"
+            >{{ product.category.friendly_name }}
+          </a>
+        </p>
+        {% endif %}
+        <p class="card-text">{{ product.price}}</p>
+
+        <!-- Edit / Delete buttons -->
+        {% if request.user.is_superuser %}
+        <small>
+          <a href="">Edit</a> |
+            <a class="text-danger" href=""	
+            >Delete</a>
+        </small>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %} 
 
 {% block postloadjs %}
+{{ block.super }}
 
 {% endblock %}
