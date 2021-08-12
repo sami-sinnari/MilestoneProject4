@@ -36,8 +36,8 @@
   </head>
   <body>
 
-    <header class="container-fluid fixed-top">
-      <div id="delivery-banner" class="container"> <!-- Delivery banner -->
+    <header>
+      <div id="delivery-banner" class="container">
         <div class="row">
             <div class="social_icons col-sm-12 col-lg-6"> 
                 <ul>
@@ -47,83 +47,87 @@
                     <li><a href="https://www.instagram.com/" target="blank"><span class="fab fa-instagram-square fa-2x"></span></a></li>
                 </ul>
                 </div>
-            <div class="bg-black text-white col-sm-12 col-lg-6">
-                <h4 class="logo-font my-1">Free delivery on orders over $!</h4>                
+            <div class="col-sm-12 col-lg-6">
+                <h4 class="free-delivery-text">Free delivery on orders over ${{ free_delivery_treshold }}!</h4>                
             </div>       
         </div>
-    </div>
-
-    <nav>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link"> <!-- URL of home url we named in urls.py-->
-                <h2 class="logo-font text-black my-0"><strong>TechArray</strong></h2>
-            </a>
         </div>
-        <div class="hamburger_wannabe">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        <ul class="nav-links_wannabe">
-            <li class="font-white-color"><a href="{% url 'products' %}">Shop</a></li>
-            <li class="font-white-color"><a href="#">About</a></li>
-            <li class="font-white-color"><a href="#">FAQ</a></li>
-            <li class="font-white-color"><a href="#">Contact</a></li>
-            <li class="font-white-color"><a href="#">Blog</a></li>
-            <!-- <li><button class="login-button" href="#">Login</button></li>
-            <li><button class="join-button" href="#">Join</button></li> -->
-        </ul>
-      </nav>
 
-          <div class="">
-              <ul class="list-inline list-unstyled text-right my-0">
-                  <li class="list-inline-item dropdown">
-                      <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <div class="text-center">
-                              <div><i class="fas fa-user fa-lg"></i></div>
-                              <p class="my-0">My Account</p>
-                          </div>
-                      </a>
-                      <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                          {% if request.user.is_authenticated %}
-                              {% if request.user.is_superuser %}
-                                  <a href="" class="dropdown-item">Product Management</a>
-                              {% endif %}
-                              <a href="" class="dropdown-item">My Profile</a>
-                              <!-- This below URLs are coming from the allauth URLs we included in the project level urls.py-->
-                              <a href="" class="dropdown-item">Logout</a>
-                          {% else %}
-                              <a href="" class="dropdown-item">Register</a>
-                              <a href="" class="dropdown-item">Login</a>
-                          {% endif %}
-                      </div>
-                  </li>
-                  <li class="list-inline-item">
-                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                          <div class="text-center">
-                              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                              <p class="my-0"> 
-                                  {% if grand_total %}
-                                      ${{ grand_total|floatformat:2 }}
-                                  {% else %}
-                                      $0.00
-                                  {% endif %}
-                              </p>
-                          </div>
-                      </a>
-                  </li>
-              </ul>
-          </div>
+        <nav class="autohide navbar-expand-lg">
+            <div class="hamburger_wannabe">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links_wannabe">
+                <li class="font-white-color"><a href="{% url 'products' %}">Shop</a></li>
+                <li class="font-white-color"><a href="#">About</a></li>
+                <li class="font-white-color"><a href="#">FAQ</a></li>
+                <li class="font-white-color"><a href="#">Contact</a></li>
+                <li class="font-white-color"><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2 class="logo-font text-black my-0"><strong>TechArray</strong></h2>
+                    </a>
+                </div>
+                <!-- <div class="account-shopping-bag"> -->
+                    <div class="col-sm-12 col-lg-6">
+                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                            <li class="list-inline-item dropdown">
+                                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-user fa-lg"></i></div>
+                                        <p class="my-0">My Account</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                    {% if request.user.is_authenticated %}
+                                        {% if request.user.is_superuser %}
+                                            <a href="" class="dropdown-item">Product Management</a>
+                                        {% endif %}
+                                        <a href="" class="dropdown-item">My Profile</a>
+                                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                    {% else %}
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                    {% endif %}
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                        <p class="my-0">
+                                            {% if grand_total %}
+                                                ${{ grand_total|floatformat:2 }}
+                                            {% else %}
+                                                $0.00
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-        <!-- SEARCH -->
-    <form method="GET" action="{% url 'products' %}">
-        <div class="input-group float-right w-25">
-            <input class="form-control py-2 border-right-0 border" name="q" type="search" value="search" id="example-search-input">
-            <span class="input-group-append">
-                <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-            </span>
-        </div>
-    </form>
+                </div>
+            </div>
+        <!-- </div> -->
+
+            <!-- SEARCH -->
+        <form method="GET" action="{% url 'products' %}" class="search-site-form">
+            <div class="input-group">
+                <input class="form-control py-2 border-right-0 border" name="q" type="search" placeholder="Search here!" id="example-search-input">
+                <span class="input-group-append">
+                    <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
+                </span>
+            </div>
+        </form>
     </header>
 
 

@@ -1,11 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    color: #f2f5f7;
     font-weight: 300;
+    color: black;
 }
 body{
     overflow-x: hidden;
+    font-weight: 700;
 }
 
 nav{
@@ -31,8 +32,10 @@ nav{
     float: right;
 }
 
-.jumbotron-section{
-    padding-top: 100px;
+/* SHOPPINH BAG AND ACCOUNT */
+
+.account-shopping-bag{
+    padding-top: 2em;
 }
 
 /*Styling Links*/
@@ -114,8 +117,106 @@ nav{
     display: none;
 }
 
+
+/*Animating hamburger_wannabe Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+/* SOCIAL LINKS */
+
+.social_icons{
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .social_icons ul li{
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .social_icons ul li a{
+    padding: 8px;
+    color: #378bdf;
+  }
+
+  .social_icons ul li a span:hover{
+    color: #6e6868;
+    transition: 0.5s ease-in-out;
+  }
+
+  .free-delivery-text{
+    padding-top: 10px;
+    text-align: center;
+  }
+
+.padding-15-em{
+    padding-top: 15em;
+}
+
+/* All Products Page */
+
+.category-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.category-btns a {
+    margin: 10px;
+}
+
+.product-container {
+    margin-bottom: 50px;
+}
+
+
+
+/* SEARCH BAR */ 
+
+.search-site-form{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Stying for small screens*/
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
     nav{
         position: fixed;
         z-index: 3;
@@ -180,40 +281,10 @@ nav{
     li.fade{
         opacity: 1;
     }
+
+    /* Search bar */ 
+
+    .search-site-form{
+
+    }
 }
-/*Animating hamburger_wannabe Icon on Click*/
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-.toggle .line2{
-    transition: all 0.7s ease;
-    width:0;
-}
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);
-}
-
-
-/* SOCIAL LINKS */
-
-.social_icons{
-    text-align: center;
-  }
-
-  .social_icons ul li{
-    list-style: none;
-    display: inline-block;
-  }
-  
-  .social_icons ul li a{
-    padding: 8px;
-    color: #378bdf;
-  }
-
-  .social_icons ul li a span:hover{
-    color: #6e6868;
-    transition: 0.5s ease-in-out;
-  }
-
-
-  
