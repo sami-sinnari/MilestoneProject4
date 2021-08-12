@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -9,6 +8,7 @@
         </div>
     </div>
 {% endblock %}
+
 {% block content %}
     <div class="container-fluid">
         <div class="row">
@@ -22,15 +22,15 @@
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3"> <!-- On mobile side by side and medium screens. Split into three columns on large and four on xl-->
-                            <div class="card h-100 border-1">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
                                 {% if product.image %}
-                                <a href="">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
-                                    <img class="card-image-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
@@ -45,6 +45,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Code below is for <hr> rule-->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>
