@@ -195,8 +195,12 @@ nav{
 }
 
 
+/* Quantity links */
 
-
+.update-link,
+.remove-item{
+    cursor: pointer;
+}
 
 
 
@@ -283,8 +287,4 @@ nav{
     }
 
     /* Search bar */ 
-
-    .search-site-form{
-
-    }
 }
