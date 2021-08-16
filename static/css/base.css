@@ -234,6 +234,16 @@ nav{
     overflow-y: auto;
 }
 
+select,
+select option {
+    color: black;
+}
+
+select:invalid,
+select option[value=''] {
+    color: gray !important;
+}
+
 /* ------------- Media Queries ------------- */
 
 @media screen and (max-width: 1000px){
