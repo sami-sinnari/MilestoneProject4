@@ -4,11 +4,11 @@
 <div class="container jumbotron-section">
   <div class="row">
     <div class="col-12 col-sm-6">
-        <h2>Chosen by experts with <br> a taste for quality</h2>
-        <p>Promoting the best components, chosen by a highly-trained builders, 
-            delivered to you directly within two to three days,
-            backed by a comprehensive 2-year warranty.
-            </p>
+      <h2>Chosen by experts with <br> a taste for quality</h2>
+      <p>Promoting the best components, chosen by a highly-trained builders,
+        delivered to you directly within two to three days,
+        backed by a comprehensive 2-year warranty.
+      </p>
     </div>
     <div class="col-12 col-sm-6">
       <img src="/media/AMDryzen7-5800x.jpg" class="rounded img-fluid" alt="Image picture">
@@ -23,20 +23,20 @@
       <h4>Filter by Category</h4>
     </div>
   </div>
-<div class="container category-container">
-  <div class="row mb-5">
-    <div class="col text-center category-btns">
-      {% for c in current_categories %}
-      <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}" >
-        <span class="">{{ c.friendly_name }}</span>
-      </a>
-      {% endfor %}
-      <a class="category-badge text-decoration-none" href="{% url 'products' %}" >
-        <span class="btn-yellow">All Items</span>
-      </a>
+  <div class="container category-container">
+    <div class="row mb-5">
+      <div class="col text-center category-btns">
+        {% for c in current_categories %}
+        <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+          <span class="">{{ c.friendly_name }}</span>
+        </a>
+        {% endfor %}
+        <a class="category-badge text-decoration-none" href="{% url 'products' %}">
+          <span class="btn-yellow">All Items</span>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
 <!-- Products Content -->
@@ -48,11 +48,11 @@
         <!-- Product Image -->
         {% if product.image %}
         <a href="{% url 'product_detail' product.id %}">
-          <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product_name }}"/>
+          <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product_name }}" />
         </a>
         {% else %}
         <a href="{% url 'product_detail' product.id %}">
-          <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product_name }}"/>
+          <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product_name }}" />
         </a>
         {% endif %}
       </div>
@@ -64,8 +64,7 @@
         </a>
         {% if product.category %}
         <p class="product-category">
-          <a href="{% url 'products' %}?category={{ product.category.name }}"
-            >{{ product.category.friendly_name }}
+          <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
           </a>
         </p>
         {% endif %}
@@ -75,7 +74,7 @@
         {% if request.user.is_superuser %}
         <small>
           <a href="{% url 'edit_product' product.id %}">Edit</a> |
-            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+          <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
         </small>
         {% endif %}
       </div>
@@ -84,7 +83,7 @@
   </div>
 </div>
 
-{% endblock %} 
+{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
