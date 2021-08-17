@@ -17,6 +17,9 @@ def contactView(request):
     else:
         form = ContactForm()
 
+    print(UserProfile)
+    print(form)
+
     if request.method == 'GET':
         form = ContactForm()
     else:
