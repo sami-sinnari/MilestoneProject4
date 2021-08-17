@@ -6,17 +6,26 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-                <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-                <p class="card-text ">{{ object.content | safe }}</p>
-            </div>
-        </div>
-        {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
-    </div>
+<!-- Post Detail -->
+<div class="container mb-5 mt-5">
+	<div class="row">
+		<div class="col-md-8 card">
+			<div class="card-body">
+				<img class="card-img-top mb-3" src="{{ post.image.url }}"/>
+				<h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+				<p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+				<p class="card-text ">{{ object.content | safe }}</p>
+			</div>
+			<!-- Back to blog button -->
+			<div class="col-12 mt-2 mb-4">
+				<a href="{% url 'blog' %}" class="btn btn-yellow">
+				<span class="icon">
+                <i class="fas fa-chevron-left"></i>
+              </span>
+				<span>Back to Blog</span>
+                </a>
+			</div>
+		</div>
+	</div>
 </div>
-
-{% endblock %}
+{% endblock %} 
