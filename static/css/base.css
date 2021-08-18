@@ -1,12 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    font-weight: 300;
-    color: black;
 }
+
 body{
     overflow-x: hidden;
-    font-weight: 700;
 }
 
 nav{
@@ -20,21 +18,7 @@ nav{
 }
 
 /*Styling logo*/
-.logo{
-    padding:1vh 1vw;
-    text-align: center;
-}
-.logo img {
-    height: 5rem;
-    width: 5rem;
-} 
-.testing{
-    float: right;
-}
 
-.account-shopping-bag{
-    padding-top: 2em;
-}
 
 /* ------------- NAVBAR links ------------- */
 .nav-links_wannabe{
@@ -87,21 +71,8 @@ nav{
     border:1.5px solid #f2f5f7;
     transition: all ease-in-out 350ms;
 }
-.join-button{
-    color: #131418;
-    background-color: #61DAFB;
-    border: 1.5px solid #61DAFB;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    font-size: 1rem;
-    cursor: pointer;
-}
-.join-button:hover {
-    color: #f2f5f7;
-    background-color: transparent;
-    border:1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
-}
+
+
 
 /*Styling hamburger_wannabe Icon*/
 .hamburger_wannabe div{
@@ -158,6 +129,10 @@ nav{
 
 .padding-15-em{
     padding-top: 15em;
+}
+
+.container-padding{
+    padding: 20px;
 }
 
 /* ------------- Category buttons ------------- */
@@ -271,6 +246,67 @@ select option[value=''] {
     border-radius: 0;
 }
 
+/* ------------- Accordion section ------------- */
+
+.faq-drawer {
+    margin-bottom: 30px;
+  }
+  
+  .faq-drawer-content-wrapper {
+    font-size: 1.25em;
+    line-height: 1.4em;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .faq-drawer-title {
+    border-top: #000 1px solid;
+    cursor: pointer;
+    display: block;
+    font-size: 1.25em;
+    font-weight: 700;
+    padding: 30px 0 0 0;
+    position: relative;
+    margin-bottom: 0;
+    transition: all 0.25s ease-out;
+  }
+  
+  .faq-drawer-title::after {
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    content: " ";
+    display: inline-block;
+    float: right;
+    height: 10px;
+    left: 2px;
+    position: relative;
+    right: 20px;
+    top: 2px;
+    transform: rotate(135deg);
+    transition: 0.35s ease-in-out;
+    vertical-align: top;
+    width: 10px;
+  }
+  
+  .faq-drawer-title:hover { 
+    color: #4E4B52  ;
+  }
+  
+  .faq-drawer-trigger:checked
+    + .faq-drawer-title
+    + .faq-drawer-content-wrapper {
+    max-height: 350px;
+  }
+  
+  .faq-drawer-trigger:checked + .faq-drawer-title::after {
+    transform: rotate(-45deg);
+    transition: 0.25s ease-in-out;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
 
 
 /* ------------- Media Queries ------------- */

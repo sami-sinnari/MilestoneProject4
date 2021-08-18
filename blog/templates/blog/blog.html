@@ -55,7 +55,7 @@
 <!-- Pagination -->
 <div>
     {% if post_list.has_other_pages %}
-    <nav aria-label="Page navigation conatiner">
+    <div aria-label="Page navigation conatiner">
       <ul class="pagination justify-content-center">
         {% if post_list.has_previous %}
         <li>
@@ -63,7 +63,8 @@
             >&laquo; Previous Page
           </a>
         </li>
-        {% endif %} {% if post_list.has_next %}
+        {% endif %} 
+        {% if post_list.has_next %}
         <li>
           <a href="?page={{ post_list.next_page_number }}" class="page-link btn-secondary">
             Next page &raquo;</a
@@ -71,7 +72,7 @@
         </li>
         {% endif %}
       </ul>
-    </nav>
+    </div>
   </div>
   {% endif %}
 {% endblock %}
