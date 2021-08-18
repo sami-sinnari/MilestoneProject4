@@ -1,0 +1,52 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block content %} 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% endblock %}
+
+<div class="container">
+    
+    <h1>Accordion</h1>
+    
+    <div class="faq-drawer">
+      <input class="faq-drawer-trigger" id="faq-drawer" type="checkbox" /><label class="faq-drawer-title" for="faq-drawer">DRAWER ONE </label>
+      <div class="faq-drawer-content-wrapper">
+        <div class="faq-drawer-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="faq-drawer">
+      <input class="faq-drawer-trigger" id="faq-drawer-2" type="checkbox" /><label class="faq-drawer-title" for="faq-drawer-2">DRAWER TWO</label>
+      <div class="faq-drawer-content-wrapper">
+        <div class="faq-drawer-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="faq-drawer">
+      <input class="faq-drawer-trigger" id="faq-drawer-3" type="checkbox" /><label class="faq-drawer-title" for="faq-drawer-3">DRAWER THREE</label>
+      <div class="faq-drawer-content-wrapper">
+        <div class="faq-drawer-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.            
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Back to top button will go here-->
+
+{% endblock %} {% block postloadjs %}
+<!-- Back to top button script will go here -->
+
+{% endblock %}
