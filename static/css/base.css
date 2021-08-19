@@ -5,6 +5,8 @@
 
 body{
     font-family: "Newsreader", sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 p {
@@ -41,9 +43,13 @@ p {
   }
 
 .container-padding{
-    padding: 20px;
+    padding-top: 15em;
 }
 
+
+.allauth-padding{
+    padding-top: 8em;
+}
 
 
 /* ------------- Navbar ------------- */
@@ -85,7 +91,7 @@ p {
 }
 
 .dropdown-menu {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
 
 .dropdown-menu a {
@@ -104,13 +110,7 @@ p {
 
   .padding-aside{
       padding: 4em;
-  }
-
-
-  .text-toright{
-    align-items: flex-end !important;
-    justify-content: flex-end !important;
-  }
+  }d
 
 
 /* ------------- Category buttons ------------- */
@@ -142,7 +142,7 @@ p {
     display: grid;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding: 10px;
 }
 
 
