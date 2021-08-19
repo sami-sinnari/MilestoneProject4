@@ -4,103 +4,11 @@
 }
 
 body{
-    overflow-x: hidden;
     font-family: "Newsreader", sans-serif;
-}
-
-nav{
-    height: 6rem;
-    width: 200px;
-    background-color: transparent;
-    /* box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); */
-    display: flex;
-    position: fixed;
-    z-index: 10;
 }
 
 p {
     font-family: "Mulish", sans-serif;
-}
-/*Styling logo*/
-
-
-/* ------------- NAVBAR links ------------- */
-.nav-links_wannabe{
-    display: flex;
-    list-style: none; 
-    width: 88vw;
-    padding: 0 0.7vw;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-}
-.nav-links_wannabe li a{
-    text-decoration: none;
-    margin: 0 0.7vw;
-}
-.nav-links_wannabe li a:hover {
-    color: #61DAFB;
-}
-.nav-links_wannabe li {
-    position: relative;
-}
-.nav-links_wannabe li a::before {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0%;
-    background-color: #61DAFB;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-    margin: 0 0 0 10%;
-}
-.nav-links_wannabe li a:hover::before{
-    width: 80%;
-}
-
-/*Styling Buttons*/
-.login-button{
-    background-color: transparent;
-    border: 1.5px solid #f2f5f7;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    margin-left: 2vw;
-    font-size: 1rem;
-    cursor: pointer;
-
-}
-.login-button:hover {
-    color: #131418;
-    background-color: #f2f5f7;
-    border:1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
-}
-
-
-
-/*Styling hamburger_wannabe Icon*/
-.hamburger_wannabe div{
-    width: 30px;
-    height:3px;
-    background: #111111;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-.hamburger_wannabe{
-    display: none;
-}
-
-
-/*Animating hamburger_wannabe Icon on Click*/
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-.toggle .line2{
-    transition: all 0.7s ease;
-    width:0;
-}
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);
 }
 
 
@@ -109,6 +17,7 @@ p {
 .social_icons{
     text-align: center;
     padding-top: 10px;
+    color: black;
   }
 
   .social_icons ul li{
@@ -131,12 +40,61 @@ p {
     text-align: center;
   }
 
-.padding-15-em{
-    padding-top: 15em;
-}
-
 .container-padding{
     padding: 20px;
+}
+
+
+
+/* ------------- Navbar ------------- */
+
+.navbar {
+    margin: 0px 24px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-brand {
+    letter-spacing: 5.6px;
+    font-size: 28px;
+    margin-right: 0px;
+}
+
+.my-account-mobile {
+    display: none;
+}
+
+.nav-item {
+    font-size: 16px;
+}
+
+.nav-icons {
+    width: auto;
+    padding: 0px;
+    padding-right: 5px;
+}
+
+.nav-icons ul li {
+    padding: 0px 5px;
+}
+
+.nav-bag p {
+    color: #7b7c7c!important;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu a {
+    color: #7b7c7c;
+}
+
+.dropdown-menu a:active {
+    background-color: #f8f9fa;
+    color: #7b7c7c;
 }
 
 /* ------------- Aside ------------- */
@@ -146,6 +104,12 @@ p {
 
   .padding-aside{
       padding: 4em;
+  }
+
+
+  .text-toright{
+    align-items: flex-end !important;
+    justify-content: flex-end !important;
   }
 
 
@@ -291,7 +255,7 @@ select option[value=''] {
     border-width: 1px 1px 0 0;
     content: " ";
     display: inline-block;
-    float: right;
+    /* float: right; */
     height: 10px;
     left: 2px;
     position: relative;
@@ -325,71 +289,71 @@ select option[value=''] {
 
 /* ------------- Media Queries ------------- */
 
-@media screen and (max-width: 1000px){
-    nav{
-        position: fixed;
-        z-index: 3;
-    }
 
-    .fade:not(.show){
-        opacity: 1;
+@media only screen and (max-width: 1200px) {
+    .navbar {
+        margin: 16px 75px;;
+        padding: 0px;
     }
     
-    .hamburger_wannabe{
-        display:block;
-        position: absolute;
-        cursor: pointer;
-        top: 50%;
-        padding: 10px;
-        transform: translate(-5%, -50%);
-        z-index: 2;
-        transition: all 0.7s ease;
+    .navbar-toggler {
+        font-size: 1rem;
     }
-    .nav-links_wannabe{
-        position: fixed;
-        background: #e6e6eba6;
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        clip-path: circle(50px at 90% -20%);
-        -webkit-clip-path: circle(50px at 90% -10%);
-        transition: all 1s ease-out;
-        pointer-events: none;
+    
+    .nav-item-list {
+        text-align: left;
+        padding: 40px 0px;
+        max-width: 100%;
+        }
+    
+    .nav-item-list li {
+        padding: 5px 0px;
+        font-size: 18px;
+        }
+    
+    .navbar-brand {
+        letter-spacing: 3.5px;
+        font-size: 20px;
+        }
+    
+    .bag-icon i {
+        font-size: 1rem;
     }
-    .nav-links_wannabe.open{
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
-        pointer-events: all;
-    }
-    .nav-links_wannabe li{
-        opacity: 0;
-    }
-    .nav-links_wannabe li:nth-child(1){
-        transition: all 0.5s ease 0.2s;
-    }
-    .nav-links_wannabe li:nth-child(2){
-        transition: all 0.5s ease 0.4s;
-    }
-    .nav-links_wannabe li:nth-child(3){
-        transition: all 0.5s ease 0.6s;
-    }
-    .nav-links_wannabe li:nth-child(4){
-        transition: all 0.5s ease 0.7s;
-    }
-    .nav-links_wannabe li:nth-child(5){
-        transition: all 0.5s ease 0.8s;
-    }
-    .nav-links_wannabe li:nth-child(6){
-        transition: all 0.5s ease 0.9s;
-        margin: 0;
-    }
-    .nav-links_wannabe li:nth-child(7){
-        transition: all 0.5s ease 1s;
-        margin: 0;
-    }
-    li.fade{
-        opacity: 1;
+    
+    .nav-bag-account {
+        -webkit-box-orient: unset;
+        -webkit-box-direction: unset;
+            -ms-flex-direction: unset;
+                flex-direction: unset;
+        }
+    
+    .my-account {
+        display: none;
+        }
+    
+    .my-account-mobile {
+        display: block;
+        }
     }
 
-    /* Search bar */ 
+
+@media only screen and (max-width: 768px) {
+    
+    .navbar {
+        margin: 16px;
+        padding: 0px;
+    }
+    
+    .navbar-brand-col {
+        width: auto;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .navbar-brand {
+        letter-spacing: 3px;
+        font-size: 20px;
+        }
 }
