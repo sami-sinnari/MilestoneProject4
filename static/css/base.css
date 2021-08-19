@@ -5,6 +5,7 @@
 
 body{
     overflow-x: hidden;
+    font-family: "Newsreader", sans-serif;
 }
 
 nav{
@@ -17,6 +18,9 @@ nav{
     z-index: 10;
 }
 
+p {
+    font-family: "Mulish", sans-serif;
+}
 /*Styling logo*/
 
 
@@ -134,6 +138,16 @@ nav{
 .container-padding{
     padding: 20px;
 }
+
+/* ------------- Aside ------------- */
+.bg-gradient-primary-to-secondary {
+    background: linear-gradient(45deg, #2937f0,#880ea7,#a432dd,#e13e3e, #e4923a, #dfcb32, #75e426) !important;
+  }
+
+  .padding-aside{
+      padding: 4em;
+  }
+
 
 /* ------------- Category buttons ------------- */
 
