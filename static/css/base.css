@@ -3,16 +3,27 @@
     padding: 0;
 }
 
+html, body {
+    width: auto; 
+    overflow-x: hidden!important ;
+} 
+
 body{
-    font-family: "Newsreader", sans-serif;
-    width: 100%;
-    overflow-x: hidden;
+    font-family: 'Poppins', serif;
 }
 
 p {
-    font-family: "Mulish", sans-serif;
+    font-family: 'Spectral', serif;
+    font-weight: 500 !important;
 }
 
+html .newsreaderr-font {
+    font-family: "Newsreader", sans-serif !important;
+}
+
+h2 {
+    color: #5a5656;   
+}
 
 /* ------------- Social Links ------------- */
 
@@ -46,6 +57,9 @@ p {
     padding-top: 15em;
 }
 
+.home-padding{
+    padding-top: 15em;
+}
 
 .allauth-padding{
     padding-top: 8em;
@@ -109,8 +123,8 @@ p {
   }
 
   .padding-aside{
-      padding: 4em;
-  }d
+      padding: 3em;
+  }
 
 
 /* ------------- Category buttons ------------- */
@@ -347,6 +361,10 @@ select option[value=''] {
     .navbar-brand-col {
         width: auto;
     }
+
+    .none-on-med{
+        display: none;
+    }
 }
 
 
@@ -356,4 +374,20 @@ select option[value=''] {
         letter-spacing: 3px;
         font-size: 20px;
         }
-}
+
+    .newfont{
+        font-size: 20px !important;
+    }
+
+    .none-on-med{
+        display: none;
+    }
+
+    .home-padding{
+        padding-top: 10em;
+    }
+
+    .display-4{
+        font-size: 2.2em !important;
+    }
+} 
