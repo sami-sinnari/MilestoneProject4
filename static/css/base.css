@@ -68,6 +68,10 @@ h2 {
 
 /* ------------- Navbar ------------- */
 
+#navbarSupportedContent {
+    transition: height 0.1s ease-out;
+}
+
 .navbar {
     margin: 0px 24px;
 }
@@ -121,11 +125,31 @@ h2 {
 .bg-gradient-primary-to-secondary {
     background: linear-gradient(45deg, #2937f0,#880ea7,#a432dd,#e13e3e, #e4923a, #dfcb32, #75e426) !important;
   }
+  
+.bg-gradient-primary-to-secondary-two {
+    background: linear-gradient(45deg, #1e28ae,#784bcc,#784bcc, #216cbd) !important;
+  }
 
   .padding-aside{
       padding: 3em;
   }
 
+
+  /* PRODUCTS PRICE */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testbtn {
+    margin-top: auto;
+  }
+
+  .card-img-top {
+    width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: cover;
+}
 
 /* ------------- Category buttons ------------- */
 
@@ -134,10 +158,10 @@ h2 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .category-btns a {
@@ -341,11 +365,11 @@ select option[value=''] {
 .testimonial {
     color: #000000;
     font-size: 1.5rem;
+    height: 200px;
 }
 
 .carousel .overview {
     text-align: center;
-    padding-bottom: 5px;
     font-size: 1rem;
 }
 
@@ -354,12 +378,12 @@ select option[value=''] {
     font-size: 1.2rem;
     text-transform: uppercase;
     display: block;
-    padding-bottom: 5px;
+
 }
 
 .carousel .star-rating i {
     font-size: 18px;
-    color: #ffdc12;
+    color: #dabb0cf8;
 }
 
 .carousel .carousel-control {
@@ -435,6 +459,12 @@ select option[value=''] {
     .my-account-mobile {
         display: block;
         }
+
+    .card-img-top {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+    }
     }
 
 
@@ -476,5 +506,9 @@ select option[value=''] {
 
     .display-4{
         font-size: 2.2em !important;
+    }
+
+    .testimonial {
+        font-size: 1.1rem;
     }
 } 

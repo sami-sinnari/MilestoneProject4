@@ -27,11 +27,11 @@
     <div class="row mb-5">
       <div class="col text-center category-btns">
         {% for c in current_categories %}
-        <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+        <a class="text-decoration-none btn btn-outline-secondary" href="{% url 'products' %}?category={{ c.name }}">
           <span class="">{{ c.friendly_name }}</span>
         </a>
         {% endfor %}
-        <a class="category-badge text-decoration-none" href="{% url 'products' %}">
+        <a class="text-decoration-none btn btn-outline-secondary" href="{% url 'products' %}">
           <span class="btn-yellow">All Items</span>
         </a>
       </div>
@@ -41,10 +41,10 @@
 
 <!-- Products Content -->
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
     {% for product in products %}
-    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-      <div class="card border-0">
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 card bg-white m-3">
+      <div class="">
         <!-- Product Image -->
         {% if product.image %}
         <a href="{% url 'product_detail' product.id %}">
@@ -58,7 +58,7 @@
       </div>
 
       <!-- Card Body -->
-      <div class="card-body pl-0">
+      <div class="card-body d-flex flex-column pl-0">
         <a href="{% url 'product_detail' product.id %}">
           <h4 class="card-title pb-0">{{ product.name }}</h4>
         </a>
@@ -68,7 +68,7 @@
           </a>
         </p>
         {% endif %}
-        <p class="card-text">{{ product.price}}</p>
+        <p class="testbtn">${{ product.price}}</p>
 
         <!-- Edit / Delete buttons -->
         {% if request.user.is_superuser %}
@@ -82,6 +82,9 @@
     {% endfor %}
   </div>
 </div>
+
+
+{% include "home/footer.html" %}
 
 {% endblock %}
 
