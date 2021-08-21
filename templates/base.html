@@ -47,7 +47,7 @@
 		<div class="container">
 			<div id="delivery-banner" class="row text-center">
 				<div class="col">
-					<p>Free delivery on orders over ${{ free_delivery_threshold }}!</p>
+					<p> <img src="/media/flashlight-left.png" alt=""> Free delivery on orders over ${{ free_delivery_threshold }}! <img src="/media/flashlight-right.png" alt=""></p>
 				</div>
 			</div>
 		</div>
@@ -55,13 +55,13 @@
 		<!-- Nav bar -->
 		<nav class="navbar navbar-expand-xl navbar-light bg-white">
 			<div class="col-4 toggler-col">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-					aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 	
 				<!-- Main Nav Items -->
-				<div class="col-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
+				<div class="col-4 collapse navbar-collapse nav-item-list" id="navbarSupportedContent">
 					<ul class="navbar-nav justify-content-start">
 						<li class="nav-item">
 							<a class="nav-link" aria-label="Shop" href="{% url 'products' %}">Shop</a>
@@ -149,12 +149,9 @@
 			</div>
 		</nav>
 		<!-- SEARCH -->
-		<form method="GET" action="{% url 'products' %}" class="search-site-form">
+		<form method="GET" action="{% url 'products' %}" class="search-site-form form-inline">
 			<div class="input-group">
-				<input class="form-control border-right-0 border" name="q" type="search" placeholder="Search here!" id="example-search-input">
-				<span class="input-group-append">
-					<div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-				</span>
+				<input class="form-control border" name="q" type="search" placeholder="Search here!" id="example-search-input">
 			</div>
 		</form>
 	</header>
