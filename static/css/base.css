@@ -151,8 +151,8 @@ h2 {
     margin: 10px;
 }
 
-.product-container {
-    margin-bottom: 50px;
+.faq-padding {
+    padding-top: 5em;
 }
 
 
@@ -320,7 +320,11 @@ select option[value=''] {
     font-family: 'Rampart One', cursive;
   }
 
-
+.blog-img-size {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+}
 
 
 
