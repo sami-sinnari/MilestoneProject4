@@ -24,12 +24,12 @@
                 
                 <div class="product-detail-btns">
                     {% if product.category %}
-                    <a class="text-decoration-none btn btn-outline-secondary w-100 h-100" href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-chevron-left"></i> {{ product.category.friendly_name }}
+                    <a class="text-decoration-none btn btn-outline-secondary w-100 h-100" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
                         </a>
                     {% endif %}
                     <hr>
                     <a class="text-decoration-none btn btn-outline-secondary w-100 h-100" href="{% url 'products' %}">
-                      <span> <i class="fas fa-chevron-left"></i> All Items</span>
+                      <span> All Items</span>
                     </a>
                   </div>
 
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="col-12 mt-4 mb-4">
-                        <a href="{% url 'products' %}" class="btn btn-yellow">
+                        <a href="{% url 'products' %}" class="btn btn-secondary">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
