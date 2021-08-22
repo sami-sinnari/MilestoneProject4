@@ -297,6 +297,38 @@ select option[value=''] {
     margin: 10px;
   }
 
+/* ------------- Blog  ------------- */
+
+  .maintxt{
+      background-image: url(/media/color-powder-picture-crop.jpeg);
+      background-size: cover;
+  }
+
+
+  .img-headline {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    color: rgb(255, 255, 255);
+    text-shadow: 10px gray;
+    font-size: 4em;
+    font-family: 'Rampart One', cursive;
+  }
+
+
+
+
+
+
+
+
+
+
 
 /* ------------- Accordion section ------------- */
 
@@ -533,7 +565,7 @@ select option[value=''] {
     }
 
     .none-on-med{
-        display: none;
+        display: block;
     }
 
     .home-padding{
