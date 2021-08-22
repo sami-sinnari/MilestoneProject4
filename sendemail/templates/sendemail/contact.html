@@ -1,16 +1,15 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
 <!-- Jumbotron -->
-<div class="jumbotron-container container-padding">
-  <div class="row">
-    <div class="col-12">
-      <div class="text-center">
-        <h1 class="display-4">Contact Us</h1>
-      </div>
+<div class="container-padding">
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-lg-9">
+        <img class="img-fluid" src="/media/contact-us.jpeg" alt="Contact Us"/>
     </div>
   </div>
 </div>
 
+</section>
 <section class="container">
   <div class="row contact-text-row">
     <div class="col-12">
@@ -26,7 +25,7 @@
       <form action="{% url 'contact' %}" method="post">
         {% csrf_token %} {{ form|crispy }}
         <div class="form-actions">
-          <button class="btn" type="submit">Send Message</button>
+          <button class="btn btn-secondary" type="submit">Send Message</button>
         </div>
       </form>
     </div>
