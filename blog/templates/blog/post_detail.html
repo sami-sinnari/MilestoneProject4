@@ -1,63 +1,77 @@
-{% extends "base.html" %}
-{% load static %}
-{% block extracss %}
+{% extends "base.html" %} {% load static %} {% block extracss %}
 <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <!-- Post Detail -->
-<div class="container mb-5 mt-5 home-padding">
+<div class="container home-padding">
 	<div class="row">
-		<div class="col-md-8 card">
-			<div class="card-body">
-				<img class="card-img-top mb-3" src="{{ post.image.url }}" alt="{{ post.title }}"/>
-				<h2>{% block title %} {{ post.title }} {% endblock title %}</h2>
-				<p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-				<p class="card-text ">{{ post.content | safe }}</p>
-			</div>
-
-			<div>
-				<div class="card-body">
-					<!-- All comments -->
-					<h2>{{ comments.count }} comments</h2>
-					{% for comment in comments %}
-						<div class="comments" style="padding: 10px;">
-							<p class="font-weight-bold">
-								{{ comment.name }}
-								<span class=" text-muted font-weight-normal">
-									{{ comment.created_on }}
+		<div class="col-md-8 offset-md-2 mt-3">
+			<div class="card">
+				<div class="card-body post-card-body">
+					{% if post.image %}
+					<img class="card-img-top mb-3" src="{{ post.image.url }}" alt="{{ post.title }}" />
+					{% else %}
+					<img class="card-img-top mb-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
+					{% endif %}
+					<h2>{% block title %} {{ post.title }} {% endblock title %}</h2>
+					<p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+					<p class="card-text">{{ post.content | safe }}</p>
+				</div>
+				<!-- Back to blog button -->
+				<div class="container">
+					<div class="row">
+						<div class="col-12 mt-2 mb-4">
+							<a href="{% url 'blog' %}" class="btn btn-secondary">
+								<span class="icon">
+									<i class="fas fa-chevron-left"></i>
 								</span>
-							</p>
-							{{ comment.body | linebreaks }}
+								<span>Back to Blog</span>
+							</a>
 						</div>
-					{% endfor %}
+					</div>
 				</div>
 			</div>
-			<div> <!-- Add a new commnent-->
+		</div>
+	</div>
+</div>
+
+<!-- Comments -->
+<div class="container">
+	<div class="row">
+		<div class="col col-md-8 offset-md-2 mt-3">
+			<div class="card">
 				<div class="card-body">
+					<h2>{{ comments.count }} comments</h2>
+					{% for comment in comments %}
+					<div class="comments" style="padding: 10px">
+						<p class="font-weight-bold">
+							{{ comment.name }}
+							<span class="text-muted font-weight-normal">
+								{{ comment.created_on }}
+							</span>
+						</p>
+						{{ comment.body | linebreaks }}
+						<hr />
+					</div>
+					{% endfor %}
+
+					<!-- Add A comment -->
 					{% if new_comment %}
 					<div class="alert alert-success" role="alert">
 						Thank you! Your comment is awaiting moderation
 					</div>
 					{% else %}
 					<h4>Leave a comment</h4>
-					<form method="post" style="margin-top: 1.3em;">
-						{{ comment_form.as_p }}
-						{% csrf_token %}
-						<button type="submit" class="btn btn-secondary  btn-lg">Submit Comment</button>
-					</form>
-					{% endif %}
+					<div class="comments" style="padding: 10px">
+						<form method="post">
+							{{ comment_form.as_p }} {% csrf_token %}
+							<button type="submit" class="btn btn-secondary btn-lg">
+								Submit Comment
+							</button>
+						</form>
+						{% endif %}
+					</div>
 				</div>
-			</div>
-			<!-- Back to blog -->
-			<div class="col-12 mt-2 mb-4">
-				<a href="{% url 'blog' %}" class="btn btn-secondary">
-					<span class="icon">
-						<i class="fas fa-chevron-left"></i>
-					</span>
-					<span>Back to Blog</span>
-				</a>
 			</div>
 		</div>
 	</div>
