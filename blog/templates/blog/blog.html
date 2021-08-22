@@ -5,15 +5,16 @@
 {% endblock %}
 
 {% block content %}
-<div class="jumbotron-section container-padding">
-    <div class="row">
-        <div class="col-12">
-            <div class="">
-                <h1 class="display-4 text-center">Blog</h1>
+<section class="bg-white">
+    <div class="home-padding">
+        <div class="row  align-items-center justify-content-center pt-2">
+            <div class="col-sm-12 col-md-12 col-lg-7 centar">
+                <img class="img-fluid" src="/media/color-powder-picture.jpeg" alt="Background PC Image"/>
+                <h1 class="img-headline">Blog</h1>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <div class="container">
     <div class="row">
@@ -28,23 +29,25 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mt-3 left">
+        <div class="col-12 mt-3 left">
             {% for post in post_list %}
             <div class="card mb-4">
                 <div class="card-body mt-2 mb-2">
-                    <a href="{% url 'post_detail' post.slug  %}">
-                        {% if post.image %}
-                        <img class="card-img-top mb-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
-                    </a>
-                    {% endif %}
-                    <a href="{% url 'post_detail' post.slug  %}">
-                        <h2 class="card-title">{{ post.title }}</h2>
-                    </a>
-                    <p class="card-text text-muted h6">
-                        {{ post.author }} | {{ post.created_on}}
-                    </p>
-                    <p class="card-text">{{ post.content|safe|slice:":100" }}...</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-yellow">Read More</a>
+                    <div class="h-100">
+                        <a href="{% url 'post_detail' post.slug  %}">
+                            {% if post.image %}
+                            <img class="card-img-top mb-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
+                        </a>
+                        {% endif %}
+                        <a href="{% url 'post_detail' post.slug  %}">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                        </a>
+                        <p class="card-text text-muted h6">
+                            {{ post.author }} | {{ post.created_on}}
+                        </p>
+                        <p class="card-text">{{ post.content|safe|slice:":100" }}...</p>
+                        <a href="{% url 'post_detail' post.slug  %}" class="btn btn-yellow">Read More</a>
+                    </div>
                 </div>
             </div>
             {% endfor %}
