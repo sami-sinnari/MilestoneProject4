@@ -134,26 +134,9 @@ h2 {
       padding: 3em;
   }
 
-
-  /* PRODUCTS PRICE */
-  .card-body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .testbtn {
-    margin-top: auto;
-  }
-
-  .card-img-top {
-    width: 200px; /* You can set the dimensions to whatever you want */
-    height: 200px;
-    object-fit: cover;
-}
-
 /* ------------- Category buttons ------------- */
 
-.category-btns {
+                                                                                .category-btns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -261,6 +244,59 @@ select option[value=''] {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+
+/* ------------- Products ------------- */
+.card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body h4{
+    color: gray;
+  }
+
+  .card-body p a{
+    color: gray;
+  }
+
+  .card-body p{
+    color: rgb(46, 46, 46);
+    font-size: larger;
+  }
+
+  .card-body h4:hover {
+    transition: 0.8s;
+    color: rgb(104, 87, 70);
+  }
+
+  .pushdown {
+    margin-top: auto;
+  }
+
+  .card-img-products {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body a {
+      text-decoration: rgb(255, 60, 0);
+  }
+
+  .category-btn-deco{
+      text-decoration: gray;
+  }
+
+  .font-override {
+      font-family: "Newsreader", sans-serif;
+  }
+
+  .product-detail-btns {
+    text-decoration: gray;  
+    margin: 10px;
+  }
+
 
 /* ------------- Accordion section ------------- */
 
@@ -460,7 +496,7 @@ select option[value=''] {
         display: block;
         }
 
-    .card-img-top {
+    .card-img-products {
         width: 100%; 
         height: 100%;
         object-fit: cover;

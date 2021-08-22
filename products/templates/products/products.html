@@ -32,7 +32,7 @@
         </a>
         {% endfor %}
         <a class="text-decoration-none btn btn-outline-secondary" href="{% url 'products' %}">
-          <span class="btn-yellow">All Items</span>
+              <span>All Items</span>
         </a>
       </div>
     </div>
@@ -41,18 +41,18 @@
 
 <!-- Products Content -->
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center font-override">
     {% for product in products %}
     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 card bg-white m-3">
-      <div class="">
+      <div>
         <!-- Product Image -->
         {% if product.image %}
         <a href="{% url 'product_detail' product.id %}">
-          <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product_name }}" />
+          <img class="card-img-products" src="{{ product.image.url }}" alt="{{ product_name }}" />
         </a>
         {% else %}
         <a href="{% url 'product_detail' product.id %}">
-          <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product_name }}" />
+          <img class="card-img-products" src="{{ MEDIA_URL }}noimage.png" alt="{{ product_name }}" />
         </a>
         {% endif %}
       </div>
@@ -63,12 +63,12 @@
           <h4 class="card-title pb-0">{{ product.name }}</h4>
         </a>
         {% if product.category %}
-        <p class="product-category">
+        <p class="pushdown category-btn-deco">
           <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
           </a>
         </p>
         {% endif %}
-        <p class="testbtn">${{ product.price}}</p>
+        <p class="pushdown">${{ product.price}}</p>
 
         <!-- Edit / Delete buttons -->
         {% if request.user.is_superuser %}

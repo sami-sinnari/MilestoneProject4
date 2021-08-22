@@ -20,15 +20,21 @@
                     <a href="{% url 'edit_product' product.id %}">Edit</a> |
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </small>
-                {% endif %} {% if product.category %}
-                <p class="product-category pt-2">
-                    <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
+                {% endif %} 
+                
+                <div class="product-detail-btns">
+                    {% if product.category %}
+                    <a class="text-decoration-none btn btn-outline-secondary w-100 h-100" href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-chevron-left"></i> {{ product.category.friendly_name }}
+                        </a>
+                    {% endif %}
+                    <hr>
+                    <a class="text-decoration-none btn btn-outline-secondary w-100 h-100" href="{% url 'products' %}">
+                      <span> <i class="fas fa-chevron-left"></i> All Items</span>
                     </a>
-                </p>
-                {% endif %}
+                  </div>
 
                 <p>{{ product.description }}</p>
-                <p>{{ product.price }}</p>
+                <p class="h4">${{ product.price }}</p>
             </div>
 
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
