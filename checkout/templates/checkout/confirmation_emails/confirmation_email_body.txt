@@ -15,6 +15,6 @@ Your order will be sent to {{ order.street_address1 }} in {{ order.town_or_city 
 
 If you have any questions, feel free to contact us at {{ contact_email }}.
 
-Yours fabulously,
+King Regards,
 
-TechArray x
+TechArray

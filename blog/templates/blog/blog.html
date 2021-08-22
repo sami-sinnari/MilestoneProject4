@@ -34,7 +34,7 @@
             <div class="card mb-4">
                 <div class="card-body mt-2 mb-2">
                     {% if post.image %}
-                    <img class="card-img-top mb-3" src="{{ post.image.url }}" alt="{{ post.title }}" />
+                    <img class="card-img-top mb-3 blog-img-size" src="{{ post.image.url }}" alt="{{ post.title }}" />
                     {% else %}
                     <img class="card-img-top mb-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" />
                     {% endif %}
