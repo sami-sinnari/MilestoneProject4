@@ -249,6 +249,10 @@ select option[value=''] {
     padding-top: 15em;
 }
 
+.order-confirmation{
+    font-family: 'Newsreader', sans-serif;
+}
+
 
 /* ------------- Products ------------- */
 .card-body {
