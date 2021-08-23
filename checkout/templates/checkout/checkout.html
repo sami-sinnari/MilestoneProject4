@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
 {% endblock %}
 
+<div class="checkout-padding"></div>
 <div class="container bag-container">
   <div class="row">
     <div class="col">
@@ -100,7 +101,7 @@
         </fieldset>
         <!-- Submit Button -->
         <div class="submit-button mt-3">
-          <a href="{% url 'view_bag' %}" class="btn btn-secondary>
+          <a href="{% url 'view_bag' %}" class="btn btn-secondary">
             <span class="icon">
               <i class="fas fa-chevron-left"></i>
             </span>
