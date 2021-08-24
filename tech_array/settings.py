@@ -128,7 +128,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
@@ -180,11 +180,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 if 'USE_AWS' in os.environ:
+
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'samisinnari-techarray'
     AWS_S3_REGION_NAME = 'eu-west-1'
