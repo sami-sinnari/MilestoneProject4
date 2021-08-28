@@ -209,7 +209,10 @@ The buttons and links - the information architecture is placed logically dependi
 
 - On profile page, I decided to remove the footer simply to make user experience nicer.
 
- * Please find all wireframes [here](static/readme/wireframes-techarray.pdf)
+**Please find all wireframes [here](static/readme/wireframes-techarray.pdf)**
+
+![Image](static/readme/wireframes-pic.PNG)
+
 
   #### [Back to Contents](#contents)
 <br>
@@ -265,6 +268,10 @@ This website has been tested on many different occasions. Besides manual testing
 ### Manual Testing
 
 - For Manual Testing I have used [BrowserStack](https://browserstack.com) as mentioned. The website appeared fully functional on each device with no errors.
+
+- Additionaly, website has been tested in details. Results can be found below : 
+
+![Image](static/readme/testing-table.PNG)
 
 ### Testing user stories
 
