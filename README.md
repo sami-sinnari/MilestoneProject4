@@ -182,6 +182,40 @@ This section is available only for admin person. The admin of the website has op
   #### [Back to Contents](#contents)
 <br>
 
+
+## Design
+
+* The website is created in an easily navigatable manner with sections added in the navbar. When user is not logged in, it includes Shop, About, FAQ, Contact and Blog. When the user is logged in, They will be able to visit their profile under "My Account". Moreover, Superuser has an extra navigation link. Superuser will be able to add products directly via the link.
+The buttons and links - the information architecture is placed logically depending on the page. The website is created in a modern and attracive layout, with eye-pleasing colors.
+
+* Navigation bar is designed in simplicity as well. The title of the website is in the middle, whereas links are on both sides. Above Website title, a note is added advising users of the amount they have to spend in order to avail of free delivery.
+
+* Products page is clear and immediately understandable. Same with shopping bag and checkout page.
+
+* Color schema is similar on landing, Blog and FAQ pages. Since I was unable to match the background image with Contact Us page, I have added very similar colors just to match the websites overall design.
+
+  #### [Back to Contents](#contents)
+<br>
+
+
+## Wireframes
+
+- I have created wireframes before making this project, therefore there are some minor differences. As I was coding the website, I decided to change the navigation bar by removing social links, and adding them to the page footer. I moved the company title in the middle and website links to the left. Moreover, I have replaced "Copyright" section of the footer with company info and social links.
+
+- On product detail page, I decided to add two additional buttons. One that leads to that product family, and one that leads to all products.
+
+- On FAQ page, I added background Image.
+
+- On Blog page, I decided to add name of the person posting, date of the post and time.
+
+- On profile page, I decided to remove the footer simply to make user experience nicer.
+
+ * Please find all wireframes [here](static/readme/wireframes-techarray.pdf)
+
+  #### [Back to Contents](#contents)
+<br>
+
+
 ## Deployment 
 
 
