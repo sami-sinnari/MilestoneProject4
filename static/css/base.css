@@ -206,7 +206,7 @@ h2 {
     height: 2px;
 }
 
-.arrow-up {
+/* .arrow-up {
     width: 0;
     height: 0;
     border-left: 4px solid transparent;
@@ -215,7 +215,7 @@ h2 {
     position: absolute;
     top: -10px;
     right: 36px;
-}
+} */
 
 .bag-notification-wrapper {
     height: 100px;
