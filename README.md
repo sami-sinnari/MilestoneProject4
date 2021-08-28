@@ -27,15 +27,14 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
 - [**Features**](#features)
 
   - [Existing Features](#features)
-  - [Features added then removed](#features)
   - [Features Left to Implement](#features)
+
+- [**Testing**](#testing)
 
 - [**Technologies**](#technologies-used)
 
   - [Languages Used](#technologies-used)
   - [Frameworks, Libraries and Programs Used](#technologies-used)
-
-- [**Testing**](#testing)
 
 - [**Deployment**](#deployment)
 
@@ -60,7 +59,7 @@ The project Idea has been expanded into a website due to my passion for PCs and 
 There are 6 main pages including the home page and a login/registration page. Other than these, there is a base page which serves as the base for all the other pages. 
 
 ### **The home page**
- The home page section will showcase the main values of the company. It is created with attractive and modern design, with button that connects to the shop.
+ The home page section will showcase the main values of the company. It is created with attractive and modern design, with button that connects to the shop. Moreover, users are provided with testimonials and footer with social media links.
 
 ### **About page**
 
@@ -68,7 +67,7 @@ The link "About" will transfer the user to the section on home page, which expla
 
 ### **FAQ**
 
-Frequ. asked question page will do what it's name says. It should give users answers to the most common questions. Due to lack of time, this section has been customized only with HTML & CSS. In the **future, FAQ page will be developed with Django App so we can update it if needed.
+Frequ. asked question page will do what it's name says. It should give users answers to the most common questions. Due to lack of time, this section has been customized only with HTML & CSS. In the **future**, FAQ page will be developed with Django App so we can update it if needed.
 
 ### **Shop page**
 
@@ -214,6 +213,155 @@ The buttons and links - the information architecture is placed logically dependi
 
   #### [Back to Contents](#contents)
 <br>
+
+
+
+## Features
+
+### Existing Features
+
+* Navigation bar - The navigation bar is divided into 3 section. First is website links which will guide users throughtout the website. The second is the title of the company, which in the same time is a home button. Third section is My Account and Shopping bag. Under My Account, users can login/ register or they can even visit their profile. If the user is Superuser, they have the option to manage products.
+
+* FAQ - This section will give users answers to most commonly asked questions. The aim of this web page is to lower the incoming contact to our customer support team, by simply replying to questions they might want to ask our company.
+
+* Contact - If by any chance users have more detailed or specific questions, they have the option to contact our team directly by simply sending us a message via Contact page. Contact page has been created with Django app therefore automatic message will be sent once they contact us, advising that we will get back to them asap.
+
+* Blog - Blog is a page created for interactivity on the website. As most PC connected companies, we want to give some advices to users or PC enthusiasts whether how to build a PC from scratch, or the best way to apply thermal paste.
+
+* Comments - Every posted blog has the luxury of comments. To share knowledge, users can post a comment with their ideas or even express different opinions. It is open to everybody therefore superuser will have the option to leave comment in draft or to approve it.
+
+* Shop - Shop will show all the products we have to offer. Users can click on the picture or name of the product, and bring a special product detail page which contains indepth information about that particular product.
+
+* Search - I added a search bar to the website and gave the users availablity to search for their particular product either by name or description. I added search bar within the navigation bar, hence making navigation througout the website simpler.
+
+* Delete/Edit/Update/Add ( Only for superuser) - Options mentioned are provided ONLY for superuser of this website. Superuser can manage all the products on the website and media files as well. Moreover, superuser can even delete comments and add new Blog content.
+
+
+
+### Features Left to Implement
+
+* FAQ app Django design - Due to lack of time, I created FAQ page with HTML and CSS. The future plan of this website is to create FAQ specifically with Django app, hence making updating of this section much easier. IT world is changing more day by day, therefore we might need to add more FAQ or even change some.
+
+* Remove/Delete Button - I am planing to add a question pop-up on delete button. Now, if superuser wants to delete an item it will be done immediately by pressing delete. I am planing to add a confirmation of delete simply as a protection as superuser might clicks remove on the wrong product.
+
+* Subscribe - To keep users in line with our new items, I am planing to add subscribe button which will automatically send subscribed users our new products in the shop.
+
+* Back to Top - My first idea was to add "Back to top" button on the website, but this was not required as my navigation bar is sticky. In the future, Once the shop is expanded, back to top button will be added.
+
+  #### [Back to Contents](#contents)
+<br>
+
+
+
+
+## Testing
+
+This website has been tested on many different occasions. Besides manual testing on different sites and browsers, the site has been tested by my mentor and Code Institute students. Moreover, the website has been tested on most devices on [BrowserStack](https://browserstack.com).
+
+### Automated Testing
+
+- Next to Manual testing, I have created automated tests for Blog, Checkout, Products and Contact pages. Please find them within the code tests.py files.
+
+### Manual Testing
+
+- For Manual Testing I have used [BrowserStack](https://browserstack.com) as mentioned. The website appeared fully functional on each device with no errors.
+
+### Testing user stories
+
+To read full *User Stories* testing, click [here](static/readme/testing.pdf)
+
+**New User**
+
+ *As a new user, I want to get more information about the company before I decide to place order with them.*
+- When a user comes to our website, they will be welcomed with attractive modern looking website, promoting only latest PC parts.
+- Users will be given detailed description of the Companys qualities as they continue to progress throughout the about section.
+- Users are provided with the graph highlighting that we are one of the cheapest on the market
+- Next to above, users are provided with the options to “Take a Tour” of our products and get familiar with the store
+
+*As a new user, I want to know what previous/current users think about the company*
+- Since some users would like to see reviews of the company, I have added testimonials section which showcase the best reviews received.
+
+*As a new user, I would like to see the products company has to offer in quick, efficient and easily accessible way.*
+- For users looking to purchase product straight from the landing page, I have added a link which leads to a shop page next to a banner picture, and “Shop” link has been added first in the navigation bar.
+- Additionally, I have added a link to the “Shop” at the end of the page for userswho decide to purchase a product after reading the “About” or testimonials section.
+
+*As a new user, I want to read some FAQ, in order to get more information about common queries.*
+- For users wanting to know the most common questions regarding delivery, payments and product (etc...), I have added a FAQ page which should clarify all the questions they might had, with the aim to avoid any confusion so they wouldn’t need to contact our customer support team for minor queries.
+
+*As a new user, I want to be able to easily register for an account so that I can see and save my personal details for faster ordering in the future.*
+- When a user decides to register for the account, they are given the option in the right side of the navigation bar for registration or in the mobile toggler menu.
+- Once they click on the account icon, they can register with email. For better security, they will be sent a conformation email onto their own email address. Once they confirm their 
+email address, they will be taken to the homepage and be informed via a notification that they have successfully signed up.
+- Once logged in, user is able to update delivery address, which was prior saved while making the first order, by checking the box next to “Save this delivery information to my profile”.
+- If a user is at the checkout point without having registered for an account thus far, they will be prompted that they can do so at this point, where the checkbox is replaced with a login/register link.
+
+**Registered User**
+
+*As a registered user, I want to be able to easily log in and log out of my account so that I can access my personal information and order history.*
+- By using My Account link from the main navigation and within the toggler on mobile, users can quickly find the login button from the dropdown so that they can log into their account. Likewise, they can use the same process to find the Logout button when they wish to log out of their account.
+
+*As a registered user, I want to be able to easily update my profile information.*
+- Whilst being on their profile, registered users are able to edit their profile information in order to have their next checkout done faster. The user will then be notified by a pop-up message to inform them if the change was successful.
+- Moreover, they are able to modify their delivery information when placing a new order. Before proceeding to the secure checkout, they can tick the box to save delivery information, hence new details will be updated.
+
+*As a registered user, I want to be able to view my past orders so that I can keep track of my orders with the company.*
+- Once a user is logged into the website and is on the profile page, they will be able to view a list of their past orders. The details include the order number, date and time of order, the items they ordered and the order total. By hovering on the order number, they will be able to view the full order number.
+- By clicking on the order number, which is highlighted, the user will be taken to a new page and be able to view that
+
+**Shopper**
+
+*As a shopper, I want to see all the products available at the moment.*
+-Once user clicks “Shop” link, they are redirected to the page which contains all of our products in one page. If user needs more information about some particular product, they can click on the product image and will be taken to a product detail page
+
+*As a shopper, I want to see different products, the ones that suit my needs.*
+- Once user is on the “Shop” page, they have 6 different buttons available. One (“All”) which shows all of our products, and other 5 that show different types of products currently for sale.
+
+*As a shopper, I want to choose the quantity of the products as I might need to buy more than one.*
+- Every product has the option for increasing the quantity. If user opens product detail page, they will see the current quantity and buttons which will allow them to increase or decrease the number of products they want to add into their bag.
+- Additionally, users are given the option to change the quantity of products inside their bag. If they decide to optout, remove button is presented under each product in the shopping bag.
+
+*As a shopper, I want to be able to add the product to my cart*
+- Users are given the option in the product detail page, to add that selected product to their shopping cart.
+- Once they add the product to the cart, they will receive a notification reminding them of the bag balance and the items already in the bag (if any).
+- Moreover, they will be told the amount to spent for free delivery (If free delivery not already awarded).
+
+*As a shopper, I want to read some reviews of that company and read some blogs regarding the PC’s.*
+- For users, testimonials section is provided to showcase some of our best compliments in order to attract them to buy from us.
+- The blog page has been added to make website modern, as most of techrelated website have that section. There, they can read some PC related articles and read comments of other users. If they wish to add a comment, they will have to enter their name and email address.
+
+*As a shopper, I want to be able to contact the website owner.*
+- In the main navigation is a link to a Contact page. On this page, users can send a message to the site owner by filling out simple form
+
+
+**Site Owner**
+
+*As the site owner, I want to be able to offer visitors free delivery based on a minimum amount ordered so that I can increase revenue and product sales via an incentive to the customer.*
+- Added a banner informing the users that we offer free delivery if they spend more than $25 ( changed to $300 in live website)
+- when a user adds items to their bag, if the total cost of the order does not add up to the minimum about required for free delivery, the popup notification of successfully adding the item to the bag will also display a notice of how much more the user needs to spend to get free delivery.
+- Additionally, on the bag page, the user will also see some text above the Secure Checkout button informing them of how much more they need to spend to get free delivery.
+
+*As a site owner, I want to inform users via email of every successful order or registration.*
+- Automated emails are being sent to users as soon as they register asking them to confirm their email address.
+- Moreover, on every order placed, users will receive a conformation email with additional information regarding their order.
+
+*As a site owner, I want to make shopping easy for our users.*
+- The website has been built userfriendly. Three “Shop” buttons are added in the landing page.
+- Once in the shop page, users are able to switch thought products by clicking the buttons provided. Each button leads to a different components.
+- Once user opens product detail page, he is given the option to increase or decrease a quantity. For components with size, user is able to pick a size in GB (Gigabyte).
+- Additionally, once user adds product to the cart, notification is given informing that item is now in the card.
+- The checkout process has also been implemented in a way to make it as easy as possible for users to place an order, with a simple form and instructions.
+
+*As a site owner, I want to be able to list my products when there is a new item in sale or when I need to update some product information.*
+- Superuser is able to add or update new products.
+- When browsing the products, two buttons are below every item, “Edit” and “Remove”. Once superuser clicksEdit, new page appears with a simple form and availability to update the product. Once “Update” is clicked, notification is displayed that the item is now updated
+
+To read full *User Stories* testing, click [here](static/readme/testing.pdf)
+
+
+  #### [Back to Contents](#contents)
+<br>
+
+
 
 
 ## Deployment 
