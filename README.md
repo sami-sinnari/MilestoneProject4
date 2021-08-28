@@ -17,7 +17,7 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
 
 - [**User Experience (UX)**](<#user-experience-(ux)>)
 
-  - [Project Idea](#project-goals)
+  - [Project Idea](#project-idea)
   - [Structure](#structure)
   - [User Goals](#user-goals)
   - [User Stories](#user-stories)
@@ -31,13 +31,14 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
 
 - [**Testing**](#testing)
 
-- [**Technologies**](#technologies-used)
+- [**Technologies**](#technologies)
   - [Tools Used](#tools-used)
   - [Authentication](#authentication)
 
 - [**Deployment**](#deployment)
 
 - [**Credits**](#credits)
+- [**Acknowledgements**](#acknowledgements)
 
 ---
 
@@ -519,5 +520,41 @@ git push heroku master
 16. In Heroku, go to the Deploy tab and connect your app to your GitHub repository and **Enable Automatic Deployment** as the deployment method to automatically push the changes to Heroku from Github
 
 17. Your site would now be deployed to Heroku
+
+#### [Back to Contents](#contents)
+
+
+## Credits
+
+**FAQ Page**: Code added on FAQ page has been inspired by Vanila CSS collapsible drawers : https://codepen.io/builtbyluke/pen/dBVVQR
+
+**Blog Content**: Blog Content has been copied from [Tech Deeps website](https://tekdeeps.com/technology/)
+
+**Media Files** :
+- Landing Page/Shop/FAQ/Contact/Blog - All pictures were Licensed on [Adobe Stock](https://stock.adobe.com/ie/)
+- Products - All pictures in Shop section are public and open therefore taken from the each company website.
+- Blog - Thermal paste: Photo by Mika Baumeister on Unsplash | Liquid Coller: Photo by Šimom Caban on Unsplash | Monitor: Photo by FOX from Pexels
+- Icons - All Icons on the website were aquired on [Flaticon](https://www.flaticon.com)
+
+**Blog**: For a Blog section, I followed tutorials with some personal additions:
+- [Blog app](https://djangocentral.com/building-a-blog-application-with-django/)
+- [Blog comments](https://djangocentral.com/creating-comments-system-with-django/)
+- [Blog pagination](https://djangocentral.com/adding-pagination-with-django/)
+
+**Contact**: In order to make Sending email application functional, I followed this tutorial with some personal additions:
+- [Django Email/Contact Form](https://learndjango.com/tutorials/django-email-contact-form)
+
+#### [Back to Contents](#contents)
+
+
+## Acknowledgements 
+
+First and Foremost, I would like to thank my amazing mentor Can Sucullu. His experience and advices have been of immense help to me. The knowledge he provided me with is something to keep.
+
+I would also like to thank Tutor support team, especially Michael, Tim, Igor, Sheryl and Miklos with all the help provided. They helped me solve many errors I faced and for that I am truly grateful.
+
+Moreover, I would like to express my gratitute to Code Institute Staff for providing me with necessery knowledge and proper guidelines throughout my time with Code Academy.
+
+And lastly, to all slack members that took time to look into my Project and point out my misses, I express my sincere thanks.
 
 #### [Back to Contents](#contents)
