@@ -32,9 +32,8 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
 - [**Testing**](#testing)
 
 - [**Technologies**](#technologies-used)
-
-  - [Languages Used](#technologies-used)
-  - [Frameworks, Libraries and Programs Used](#technologies-used)
+  - [Tools Used](#tools-used)
+  - [Authentication](#authentication)
 
 - [**Deployment**](#deployment)
 
@@ -113,6 +112,7 @@ This section is available only for admin person. The admin of the website has op
  - Approve or disapprove comments posted
  - Add blogs content.
 
+  #### [Back to Contents](#contents)
 <br>
 
 ## User Goals
@@ -361,6 +361,36 @@ To read full *User Stories* testing, click [here](static/readme/testing.pdf)
   #### [Back to Contents](#contents)
 <br>
 
+
+
+## Technologies
+
+* [HTML](https://html.com/)
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) 
+* [JavaScript](https://www.javascript.com/) 
+* [JavaQuery](https://jquery.com/)
+* [Django]( https://www.djangoproject.com/)
+* [GitHub](https://github.com/)
+* [GitPod](https://www.gitpod.io/)
+* [Heroku](https://www.heroku.com/)
+* [Stripe](https://stripe.com)
+* [Amazon Web Services]( https://aws.amazon.com/)
+
+### Tools Used
+
+* [Balsamiq](https://balsamiq.com/) - I used Balsamiq to create wireframes for this project
+* [W3C HTML Validator](https://validator.w3.org/) - I used this tool to check the validity of my HTML code.
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - I used this tool to check the validity of my CSS code.
+* [Autoprefixed](https://autoprefixer.github.io/) - I used this tool to check the prefixes on my CSS code.
+* [PEP8](http://pep8online.com/) - I used this tool to check that my python files meet the PEP8 requirements.
+* [JSHint]( https://jshint.com/- I used this tool to check for errors in my JavaScript code.
+
+### Authentication
+
+The website authentication is provided by Django App Allauth. <br>
+A user must follow the instructions on the ‘Register’ page (enter an email address, username and password) and then confirm their email address via the email they receive. Once this has been completed user can sign in to the website.
+
+#### [Back to Contents](#contents)
 
 
 
