@@ -17,52 +17,8 @@ p {
     font-weight: 500 !important;
 }
 
-html .newsreaderr-font {
-    font-family: "Newsreader", sans-serif !important;
-}
-
 h2 {
     color: #5a5656;   
-}
-
-/* ------------- Social Links ------------- */
-
-.social_icons{
-    text-align: center;
-    padding-top: 10px;
-    color: black;
-  }
-
-  .social_icons ul li{
-    list-style: none;
-    display: inline-block;
-  }
-  
-  .social_icons ul li a{
-    padding: 8px;
-    color: #378bdf;
-  }
-
-  .social_icons ul li a span:hover{
-    color: #6e6868;
-    transition: 0.5s ease-in-out;
-  }
-
-  .free-delivery-text{
-    padding-top: 10px;
-    text-align: center;
-  }
-
-.container-padding{
-    padding-top: 15em;
-}
-
-.home-padding{
-    padding-top: 15em;
-}
-
-.allauth-padding{
-    padding-top: 8em;
 }
 
 
@@ -122,10 +78,7 @@ h2 {
 }
 
 /* ------------- Aside ------------- */
-.bg-gradient-primary-to-secondary {
-    background: linear-gradient(45deg, #2937f0,#880ea7,#a432dd,#e13e3e, #e4923a, #dfcb32, #75e426) !important;
-  }
-  
+
 .bg-gradient-primary-to-secondary-two {
     background: linear-gradient(45deg, #1e28ae,#784bcc,#784bcc, #216cbd) !important;
   }
@@ -136,7 +89,7 @@ h2 {
 
 /* ------------- Category buttons ------------- */
 
-                                                                                .category-btns {
+.category-btns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -154,9 +107,6 @@ h2 {
 .faq-padding {
     padding-top: 5em;
 }
-
-
-/* btns */
 
 .btn-secondary:hover,
 .btn-secondary:active,
@@ -205,17 +155,6 @@ h2 {
 .toast-capper{
     height: 2px;
 }
-
-/* .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-} */
 
 .bag-notification-wrapper {
     height: 100px;
@@ -321,12 +260,6 @@ select option[value=''] {
   }
 
 /* ------------- Blog  ------------- */
-
-  .maintxt{
-      background-image: url(/media/color-powder-picture-crop.jpeg);
-      background-size: cover;
-  }
-
 
   .img-headline {
     position: absolute;
@@ -506,8 +439,46 @@ select option[value=''] {
     margin-right: -2px;
 }
 
-/* ALLAUTH*/
 
+/* ------------- Social Links ------------- */
+
+.social_icons{
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+  }
+
+  .social_icons ul li{
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .social_icons ul li a{
+    padding: 8px;
+    color: #378bdf;
+  }
+
+  .social_icons ul li a span:hover{
+    color: #6e6868;
+    transition: 0.5s ease-in-out;
+  }
+
+  .free-delivery-text{
+    padding-top: 10px;
+    text-align: center;
+  }
+
+.container-padding{
+    padding-top: 15em;
+}
+
+.home-padding{
+    padding-top: 15em;
+}
+
+.allauth-padding{
+    padding-top: 8em;
+}
 
 /* ------------- Media Queries ------------- */
 
@@ -565,6 +536,7 @@ select option[value=''] {
     }
 
 
+
 @media only screen and (max-width: 768px) {
     
     .navbar {
@@ -580,6 +552,7 @@ select option[value=''] {
         display: none;
     }
 }
+
 
 
 @media only screen and (max-width: 600px) {
