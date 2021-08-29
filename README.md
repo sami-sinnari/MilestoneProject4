@@ -533,8 +533,15 @@ git push heroku master
 **Media Files** :
 - Landing Page/Shop/FAQ/Contact/Blog - All pictures were Licensed on [Adobe Stock](https://stock.adobe.com/ie/)
 - Products - All pictures in Shop section are public and open therefore taken from the each company website.
-- Blog - Thermal paste: Photo by Mika Baumeister on Unsplash | Liquid Coller: Photo by Šimom Caban on Unsplash | Monitor: Photo by FOX from Pexels
-- Icons - All Icons on the website were aquired on [Flaticon](https://www.flaticon.com)
+- Blog : 
+  - Thermal paste: Photo by Mika Baumeister on Unsplash
+  - Liquid Coller: Photo by Šimom Caban on Unsplash
+  - Monitor: Photo by FOX from Pexels
+- Icons and Favicon - All Icons on the website were aquired on [Flaticon](https://www.flaticon.com)
+- Testimonials - All pictures taken on Pexels : 
+  - Review 1 : Photo by Anthony Shkraba from Pexels
+  - Review 2 : Photo by cottonbro from Pexels
+  - Review 3 : Photo by Andres Ayrton from Pexels
 
 **Blog**: For a Blog section, I followed tutorials with some personal additions:
 - [Blog app](https://djangocentral.com/building-a-blog-application-with-django/)
