@@ -47,11 +47,11 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
 
 ## Project Idea
 
-TechArray is a website that promotes PC Components. The focus of the website is to sell newest ( or latest) PC parts for personal or business use. 
+TechArray is a website that promotes and sells PC Components. The focus of the website is to sell newest ( or latest) PC parts for personal or business use. 
 
 Website users will have the option to create an account in order to preview their previous orders and they will have the option to save their delivery details for faster purchase in the future.
 
-The project Idea has been expanded into a website due to my passion for PCs and everything connected to a PC.
+The project idea has been expanded into a website due to my passion for PCs and everything connected to a PC.
 
 
 ## Structure
