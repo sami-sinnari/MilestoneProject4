@@ -116,7 +116,6 @@ h2 {
 .btn-secondary:active,
 .btn-secondary:focus {
     background-color: #bdbdbd;
-    border: none;
     color: #2C2C2C;
     padding: 6px 12px;
     font-size: 16px;
