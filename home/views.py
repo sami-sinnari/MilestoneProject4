@@ -15,3 +15,8 @@ def accordion(request):
     }
 
     return render(request, 'home/accordion.html', context)
+
+
+def about(request):
+
+    return render(request, 'home')
