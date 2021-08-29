@@ -122,10 +122,12 @@ h2 {
 
 .btn-secondary-pagination {
     border-radius: 20%;
+    background-color: #e2e2e2;
+    color: #494949;
 }
 
 .btn-secondary-pagination:hover {
-    background-color: #949494;
+    background-color: #3c3c3c;
     color: #ffffff;
     border-radius: 30%;
 }
