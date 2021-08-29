@@ -63,14 +63,14 @@
       <ul class="pagination justify-content-center">
         {% if post_list.has_previous %}
         <li>
-          <a href="?page={{ post_list.previous_page_number }}" class="page-link btn btn-secondary"
+          <a href="?page={{ post_list.previous_page_number }}" class="page-link btn-secondary-pagination"
             >&laquo; Previous Page
           </a>
         </li>
         {% endif %} 
         {% if post_list.has_next %}
         <li>
-          <a href="?page={{ post_list.next_page_number }}" class="page-link btn btn-secondary">
+          <a href="?page={{ post_list.next_page_number }}" class="page-link btn-secondary-pagination">
             Next page &raquo;</a
           >
         </li>
