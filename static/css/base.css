@@ -358,29 +358,6 @@ select option[value=''] {
 }
 
 
-/* ------------- Contact form ------------- */
-
-
-.contact-form-row {
-border-width: 2px;
-border-style: ridge;
-border-right: 0;
-border-image: 
-  linear-gradient(
-    to bottom, 
-    blue, 
-    yellow, 
-    pink, 
-    red, 
-    green, 
-    rgba(0, 0, 0, 0)
-  ) 10% 100%;
-}
-
-
-
-
-
 /* ------------- Accordion section ------------- */
 
 /* Code below has been inspired by Vanila CSS collapsible drawers : https://codepen.io/builtbyluke/pen/dBVVQR  */
