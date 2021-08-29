@@ -79,6 +79,10 @@ h2 {
 
 /* ------------- Aside ------------- */
 
+.bg-gradient-primary-to-secondary {
+    background: linear-gradient(45deg, #2937f0,#880ea7,#a432dd,#e13e3e, #e4923a, #dfcb32, #75e426) !important;
+  }
+
 .bg-gradient-primary-to-secondary-two {
     background: linear-gradient(45deg, #1e28ae,#784bcc,#784bcc, #216cbd) !important;
   }
@@ -360,10 +364,6 @@ select option[value=''] {
   .faq-drawer-trigger:checked + .faq-drawer-title::after {
     transform: rotate(-45deg);
     transition: 0.25s ease-in-out;
-  }
-  
-  input[type="checkbox"] {
-    display: none;
   }
 
 /* ------------- Testimonials section test  ------------- */
