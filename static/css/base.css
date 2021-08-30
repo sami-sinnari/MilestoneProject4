@@ -597,6 +597,6 @@ select option[value=''] {
     }
 
     .padding-extra{
-        padding: 1em;
+        padding: 0;
     }
 } 
