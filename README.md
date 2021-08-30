@@ -34,7 +34,10 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
 - [**Testing**](#testing)
 
 - [**Technologies**](#technologies)
+  - [Languages](#languages)
+  - [Frameworks and Libraries](#frameworks-and-libraries)
   - [Tools Used](#tools-used)
+  - [Dependencies](#dependencies)
   - [Authentication](#authentication)
 
 - [**Deployment**](#deployment)
@@ -239,7 +242,7 @@ All the fonts used in this project were aquired on [Google Fonts](https://fonts.
 
 ## Schema Design
 
-I have designed the schema in five main models by considering parts of the website and needs of the database.
+I have designed the schema in five main models by considering parts of the website and needs of the database. SQLite3 was used in development as part of the Django framework and Heroku Postgres was used for Production.
 
 Models/Sections is schema are :
   - user_profile
@@ -249,6 +252,8 @@ Models/Sections is schema are :
   - category
   - blog
   - blog comment
+
+The models used in the project can be found below:
 
 ![Image](static/readme/schema.png)
 
@@ -332,27 +337,35 @@ Afterwards, more detailed testing has been implemented and I found (2) Issues. F
 ![Image](static/readme/manual-testing.PNG)
 
 
+The **Payment section** has been tested on many occasions. Additionally, website has been tested via many cards following the [Stripe Documentation](https://stripe.com/docs/testing#cards)
+
 #### **W3C CSS Validator**
 
 For this project I have used [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to check my CSS code.
- - base.css - Code passes without any particular errors. The only in the file is connected to "webkit-box"
- - checkout.css - Code passes without any errors.
- - profile.css - Code passes without any errors.
+- base.css 
+  - Code passes without any particular errors.
+- checkout.css 
+  - Code passes without any errors.
+- profile.css 
+  - Code passes without any errors. <br>
 
+![image](static/readme/wc3css.PNG)
 
 #### **W3C HTML Validator**
 
-For this project I have used [W3C HTML Validator](https://validator.w3.org/) to check my HTML code.
- - Code passes without any errors. The only "errors" on the files are ones **connected** with Django values.
+For this project I have used [W3C HTML Validator](https://validator.w3.org/) to check my HTML code. Every Page has been checked seperately.
+ - Code passes without any errors after filtering out Django values. <br>
 
-
+![image](static/readme/w3validator.PNG)
 #### **JShint**
 For this project I have used [JSHint](https://jshint.com/) to check my JavaScript code.
  - Code passes with *Two warnings and two undefined variables*. Both are unchangable therefore I've been advised that the code passes.
 
 #### **PEP8**
-For this project I have used **PEP8*** to check formatting rules.
+For this project I have used **PEP8** to check formatting rules.
  - There are no errors when checked with PEP8 check. The only rules ignored are *'Line too long'* and *'Avoid using null+True'* as this can damage the website if changed. All whitelines and blank spaces have been fixed.
+
+![image](static/readme/views-pep8.PNG)
 
 
 ### **Testing user stories**
@@ -451,28 +464,73 @@ To read full *User Stories* testing, click [here](static/readme/testing.pdf)
 <br>
 
 
-
 ## Technologies
 
-* [HTML](https://html.com/)
-* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) 
-* [JavaScript](https://www.javascript.com/) 
-* [JavaQuery](https://jquery.com/)
-* [Django]( https://www.djangoproject.com/)
-* [GitHub](https://github.com/)
-* [GitPod](https://www.gitpod.io/)
-* [Heroku](https://www.heroku.com/)
-* [Stripe](https://stripe.com)
-* [Amazon Web Services]( https://aws.amazon.com/)
+
+### Languages
+- [HTML](https://html.com/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) 
+- [JavaScript](https://www.javascript.com/) 
+- [JavaQuery](https://jquery.com/)
+
+### Frameworks and Libraries
+- [Django]( https://www.djangoproject.com/)
+  - Django was the web framework used to build the project
+- [GitHub](https://github.com/)
+  - GitHub was used to store the project code that was pushed from VS Code
+- [GitPod](https://www.gitpod.io/)
+  - was the editor used to code the project
+- [Heroku](https://www.heroku.com/)
+  - Heroku is a cloud platform that was used to deploy and run the application from the GitHub repository
+- [Stripe](https://stripe.com)
+  - Stripe was used to integrate online payment processing
+- [Amazon Web Services]( https://aws.amazon.com/)   
+  - Amazon S3 (Amazon Simple Storage Service) was used to store static and media files used in the project
+
 
 ### Tools Used
 
-* [Balsamiq](https://balsamiq.com/) - I used Balsamiq to create wireframes for this project
-* [W3C HTML Validator](https://validator.w3.org/) - I used this tool to check the validity of my HTML code.
-* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - I used this tool to check the validity of my CSS code.
-* [Autoprefixed](https://autoprefixer.github.io/) - I used this tool to check the prefixes on my CSS code.
-* [PEP8](http://pep8online.com/) - I used this tool to check that my python files meet the PEP8 requirements.
-* [JSHint](https://jshint.com/)- I used this tool to check for errors in my JavaScript code.
+- [Balsamiq](https://balsamiq.com/) 
+  - I used Balsamiq to create wireframes for this project
+- [W3C HTML Validator](https://validator.w3.org/) 
+  - I used this tool to check the validity of my HTML code.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
+  - I used this tool to check the validity of my CSS code.
+- [Autoprefixed](https://autoprefixer.github.io/) 
+  - I used this tool to check the prefixes on my CSS code.
+- [PEP8](http://pep8online.com/) 
+  - I used this tool to check that my python files meet the PEP8 requirements.
+- [JSHint](https://jshint.com/)
+  - I used this tool to check for errors in my JavaScript code.
+
+
+### Dependencies
+
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/overview.html)
+  - It is Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
+  - Python imaging library
+- [Django Countries](https://pypi.org/project/django-countries/)
+  - A Django application that provides country choices for use with forms, flag icons static files, and a country field for models
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  - Django DRY forms. Build programmatic reusable layouts out of components, having full control of the rendered HTML without writing HTML in templates
+- [Crispy Bootstrap 5](https://github.com/django-crispy-forms/crispy-bootstrap5)
+  - Bootstrap5 template pack for django-crispy-forms
+- [Stripe](https://stripe.com/docs)
+  - A Python library for Stripe’s API
+- [dj-stripe](https://dj-stripe.readthedocs.io/en/master/)
+  - dj-stripe implements all of the Stripe models, for Django
+- [dj_database_url](https://pypi.org/project/dj-database-url/)
+  - This utility allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application
+- [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+  - Psycopg is the most popular PostgreSQL database adapter for the Python programming language
+- [gunicorn](https://pypi.org/project/gunicorn/)
+  - Gunicorn is a Python WSGI HTTP Server for UNIX
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+  - Use the AWS SDK for Python (Boto3) to create, configure, and manage AWS services, such as Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)
+- [django-storages](https://django-storages.readthedocs.io/en/latest/)
+  - A collection of custom storage backends for Django
+
 
 ### Authentication
 
@@ -602,10 +660,46 @@ git push heroku master
 
 17. Your site would now be deployed to Heroku
 
+
+### AWS Amazon S3 Bucket
+
+I have used AWS S3 Bucket to store my static files and following steps were taken:
+
+- Login in to your [AWS](https://aws.amazon.com/) account or create an account if you don't already have one
+- Click on My Account and open the AWS Management Console
+- Search for S3 in services and create a new bucket
+- Give the bucket a name, set the region closest to you and uncheck **"Block all Public Access"**
+- Open the new bucket and enable static website hosting located at the bottom of the page
+- Open the permissions tab and edit the CORS configuration at the bottom of the page to set up the required access between the heroku app and the bucket:
+
+```bash
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+
+- Open Bucket Policy on the permissions tab and open the policy generator
+- Set the policy type to **"S3 Bucket Policy"**, the principal to **"*"**, the action to **"GetObject"** and add the ARN which can be found on the Bucket Policy Editor page
+- Add the statement and then generate the policy
+- Copy and paste the generated policy into the Bucket Policy Editor, adding a **"/*"** to the end of the resource key
+
 #### [Back to Contents](#contents)
 
 
 ## Credits
+
+**Website** - I have used [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/) for different components in this project, like Navbar, Toasts, Cards, etc ...
 
 **FAQ Page**: Code added on FAQ page has been inspired by Vanila CSS collapsible drawers : https://codepen.io/builtbyluke/pen/dBVVQR
 
