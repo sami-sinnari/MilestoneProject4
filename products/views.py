@@ -11,7 +11,7 @@ from .forms import ProductForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.order_by('-sku').all()
+    products = Product.objects.all()
     query = None
     categories = Category.objects.all()
 

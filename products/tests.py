@@ -4,12 +4,6 @@ from products.forms import ProductForm
 
 class TestProductForm(TestCase):
 
-    def test_sku_is_not_required(self):
-        form = ProductForm({'name': 'Test Name'
-                            'description:' 'Test Description'
-                            'price:' '$9.99'})
-        self.assertFalse(form.is_valid())
-
     def test_product_name_is_required(self):
         form = ProductForm({'name': 'Test name'})
         self.assertFalse(form.is_valid())
