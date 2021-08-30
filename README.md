@@ -7,7 +7,7 @@ It is fully responsive website with full-stack functionality, focusing on being 
 A demo of the website can be found here [TechArray](https://samisinnari-techarray.herokuapp.com/)
 
 
-![Am-I-Responsive](assets/images/am-i-responsive.jpg)
+![Am-I-Responsive](static/readme/am-i-responsive.png) <br>
 The image above is a screenshot from [Am I Responsive](http://ami.responsivedesign.is/#)
 
 
@@ -223,9 +223,9 @@ The buttons and links - the information architecture is placed logically dependi
 
 ## Schema Design
 
-I have designed the schema in five models by considering parts of the website and needs of the database.
+I have designed the schema in five main models by considering parts of the website and needs of the database.
 
-Models/Sections are :
+Models/Sections is schema are :
   - user_profile
   - order
   - order_line_items
