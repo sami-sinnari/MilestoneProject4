@@ -87,10 +87,6 @@ h2 {
     background: linear-gradient(45deg, #1e28ae,#784bcc,#784bcc, #216cbd) !important;
   }
 
-  .padding-aside{
-      padding: 3em;
-  }
-
 /* ------------- Category buttons and btns ------------- */
 
 .category-btns {
@@ -490,6 +486,14 @@ select option[value=''] {
     padding-top: 8em;
 }
 
+.padding-aside{
+    padding: 3em;
+}
+
+.padding-extra{
+    padding: 3em;
+}
+
 /* ------------- Media Queries ------------- */
 
 
@@ -590,5 +594,9 @@ select option[value=''] {
 
     .testimonial {
         font-size: 1.1rem;
+    }
+
+    .padding-extra{
+        padding: 1em;
     }
 } 
