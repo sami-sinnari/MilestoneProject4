@@ -202,11 +202,15 @@ The buttons and links - the information architecture is placed logically dependi
 The image above is a screenshot from [Coolors](https://coolors.co/)
 
 
-*The website footer color schema has been matched with landing page price graph photo and it is as below* : 
+*The website footer colors were matched with landing page price graph photo and it is as below* : 
 
 ![Image](static/readme/palette-colors-2.PNG) <br>
 The image above is a screenshot from [Coolors](https://coolors.co/)
 
+
+Fonts used - For this project I decided to use 3 different fonts. The fonts used are :  <br>
+![Image](static/readme/fonts.PNG) <br>
+All the fonts used in this project were aquired on [Google Fonts](https://fonts.google.com/)
 
   #### [Back to Contents](#contents)
 <br>
