@@ -196,6 +196,18 @@ The buttons and links - the information architecture is placed logically dependi
 
 * Color schema is similar on landing, Blog and FAQ pages. Since I was unable to match the background image with Contact Us page, I have added very similar colors just to match the websites overall design.
 
+*The overall website color schema (including buttons and hovereffects) is as below* : 
+
+![Image](static/readme/palette-colors-1.PNG) <br>
+The image above is a screenshot from [Coolors](https://coolors.co/)
+
+
+*The website footer color schema has been matched with landing page price graph photo and it is as below* : 
+
+![Image](static/readme/palette-colors-2.PNG) <br>
+The image above is a screenshot from [Coolors](https://coolors.co/)
+
+
   #### [Back to Contents](#contents)
 <br>
 
@@ -305,11 +317,41 @@ This website has been tested on many different occasions. Besides manual testing
 
 - For Manual Testing I have used [BrowserStack](https://browserstack.com) as mentioned. The website appeared fully functional on each device with no errors.
 
-- Additionaly, website has been tested in details. Results can be found below : 
+- Additionaly, first munal testing on the website has been done in full and results can be found below:
 
 ![Image](static/readme/testing-table.PNG)
 
-### Testing user stories
+---
+ 
+Afterwards, more detailed testing has been implemented and I found (2) Issues. Full documentantion can be found below : 
+
+![Image](static/readme/manual-testing.PNG)
+
+
+#### **W3C CSS Validator**
+
+For this project I have used [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to check my CSS code.
+ - base.css - Code passes without any particular errors. The only in the file is connected to "webkit-box"
+ - checkout.css - Code passes without any errors.
+ - profile.css - Code passes without any errors.
+
+
+#### **W3C HTML Validator**
+
+For this project I have used [W3C HTML Validator](https://validator.w3.org/) to check my HTML code.
+ - Code passes without any errors. The only "errors" on the files are ones **connected** with Django values.
+
+
+#### **JShint**
+For this project I have used [JSHint](https://jshint.com/) to check my JavaScript code.
+ - Code passes with *Two warnings and two undefined variables*. Both are unchangable therefore I've been advised that the code passes.
+
+#### **PEP8**
+For this project I have used **PEP8*** to check formatting rules.
+ - There are no errors when checked with PEP8 check. The only rules ignored are *'Line too long'* and *'Avoid using null+True'* as this can damage the website if changed. All whitelines and blank spaces have been fixed.
+
+
+### **Testing user stories**
 
 To read full *User Stories* testing, click [here](static/readme/testing.pdf)
 
@@ -426,7 +468,7 @@ To read full *User Stories* testing, click [here](static/readme/testing.pdf)
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - I used this tool to check the validity of my CSS code.
 * [Autoprefixed](https://autoprefixer.github.io/) - I used this tool to check the prefixes on my CSS code.
 * [PEP8](http://pep8online.com/) - I used this tool to check that my python files meet the PEP8 requirements.
-* [JSHint]( https://jshint.com/- I used this tool to check for errors in my JavaScript code.
+* [JSHint](https://jshint.com/)- I used this tool to check for errors in my JavaScript code.
 
 ### Authentication
 
@@ -600,3 +642,9 @@ Moreover, I would like to express my gratitute to Code Institute Staff for provi
 And lastly, to all slack members that took time to look into my Project and point out my misses, I express my sincere thanks.
 
 #### [Back to Contents](#contents)
+
+---
+
+This site was built for educational purposes only. If you find any content not mentioned in [**Credits**](https://github.com/sami-sinnari/MilestoneProject4#credits) that violates the copyrights, please contact me on samisinnari@gmail.com
+
+---
