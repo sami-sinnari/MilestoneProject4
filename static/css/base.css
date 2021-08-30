@@ -287,7 +287,6 @@ select option[value=''] {
     width: max-content;
     height: max-content;
     color: rgb(255, 255, 255);
-    text-shadow: 10px gray;
     font-size: 4em;
     font-family: 'Rampart One', cursive;
   }
