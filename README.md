@@ -24,6 +24,8 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
   - [Design](#design)
   - [Wireframes](#wireframes)
 
+- [**Schema Design**](#schema-design)
+
 - [**Features**](#features)
 
   - [Existing Features](#features)
@@ -218,6 +220,39 @@ The buttons and links - the information architecture is placed logically dependi
   #### [Back to Contents](#contents)
 <br>
 
+
+## Schema Design
+
+I have designed the schema in five models by considering parts of the website and needs of the database.
+
+Models/Sections are :
+  - user_profile
+  - order
+  - order_line_items
+  - products
+  - category
+  - blog
+  - blog comment
+
+![Image](static/readme/schema.png)
+
+*user_profile* - Users can save their details to the profile and update details if they want. Password, username and email address details are set when users register for the site. Delivery details are updated on the profile when users makes a purchase and checks the box to save those details provided to their profile.
+
+*order* - It includes order in full with delivery details on profile and order_line_items.
+
+*order_line_items* - It includes details of each product the user orders and details of each product are linked to the products section.
+
+*products* - It includes all the information related to a product, including the product item image, name, price, SKU, description and category. Products on the shop are only addable by Superuser.
+
+*category* - Category model holds the categories which are selected in the product model. These categories are pre-set and can only be added or changed by a Superuser.
+
+*blog* - Blogs are non-relational to the rest of the database, and they holds details of the blog posts including the blog title, poster, status, image and the post content. The blog post can only be added by a Superuser.
+
+*blog comment* - The blog comments are created in a way when user is logged in, the email section will be prefilled because it is linked to their account. The model of a comment requires a name, comment body, date it was created and the active status. Superuser is the only who can approve the comments by selecting "Publish" or "Draft".
+
+
+  #### [Back to Contents](#contents)
+<br>
 
 
 ## Features
