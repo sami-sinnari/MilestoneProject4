@@ -8,8 +8,8 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 
 from products.models import Product
-from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
 from bag.contexts import bag_contents
 
 import stripe
@@ -134,7 +134,7 @@ def checkout(request):
 
 # Checkout Success View
 def checkout_success(request, order_number):
-
+    # Handle Successful Checkout
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -144,7 +144,7 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
+        # Save address to profile on checkout
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,

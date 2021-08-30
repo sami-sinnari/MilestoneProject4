@@ -369,7 +369,7 @@ select option[value=''] {
       display: none;
   }
 
-/* ------------- Testimonials section test  ------------- */
+/* ------------- Testimonials section ------------- */
 
 .carousel {
     width: 650px;
@@ -460,28 +460,23 @@ select option[value=''] {
 .social_icons{
     text-align: center;
     padding-top: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
   }
 
-  .social_icons ul li{
+  .social_icons a{
     list-style: none;
     display: inline-block;
-  }
-  
-  .social_icons ul li a{
     padding: 8px;
-    color: #378bdf;
+    color: #ffffff;
   }
 
-  .social_icons ul li a span:hover{
-    color: #6e6868;
-    transition: 0.5s ease-in-out;
+  .social_icons a:hover{
+    color: #86828272;
+    transition: 0.2s ease-in-out;
   }
 
-  .free-delivery-text{
-    padding-top: 10px;
-    text-align: center;
-  }
+
+/* ------------- Paddings ------------- */
 
 .container-padding{
     padding-top: 15em;
