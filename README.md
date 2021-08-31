@@ -1,6 +1,6 @@
 # Milestone 4 Project – TechArray
 
-TechArray website has been build as a final project with Code Institue. Knowledge used in this project has been gained solely from the Code Academy.
+TechArray website has been build as a final project with Code Institue. Knowledge used in this project has been mostly gained from the Code Academy.
 
 It is fully responsive website with full-stack functionality, focusing on being user-friendly. The website is a PC Components store.
 
@@ -30,6 +30,7 @@ The image above is a screenshot from [Am I Responsive](http://ami.responsivedesi
 
   - [Existing Features](#features)
   - [Features Left to Implement](#features)
+  - [Removed Features](#removed-features)
 
 - [**Testing**](#testing)
 
@@ -118,7 +119,7 @@ This section is available only for admin person. The admin of the website has op
  - Approve or disapprove comments posted
  - Add blogs content.
 
-  #### [Back to Contents](#contents)
+#### [Back to Contents](#contents)
 <br>
 
 ## User Goals
@@ -184,7 +185,7 @@ This section is available only for admin person. The admin of the website has op
 
 
 
-  #### [Back to Contents](#contents)
+#### [Back to Contents](#contents)
 <br>
 
 
@@ -215,7 +216,7 @@ Fonts used - For this project I decided to use 3 different fonts. The fonts used
 ![Image](static/readme/fonts.PNG) <br>
 All the fonts used in this project were aquired on [Google Fonts](https://fonts.google.com/)
 
-  #### [Back to Contents](#contents)
+#### [Back to Contents](#contents)
 <br>
 
 
@@ -236,13 +237,13 @@ All the fonts used in this project were aquired on [Google Fonts](https://fonts.
 ![Image](static/readme/wireframes-pic.PNG)
 
 
-  #### [Back to Contents](#contents)
+#### [Back to Contents](#contents)
 <br>
 
 
 ## Schema Design
 
-I have designed the schema in five main models by considering parts of the website and needs of the database. SQLite3 was used in development as part of the Django framework and Heroku Postgres was used for Production.
+I have designed the schema in five main models by considering parts of the website and needs of the database. [SQLite3](https://www.sqlite.org/index.html) was used in development as part of the Django framework and [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) was used for Production.
 
 Models/Sections is schema are :
   - user_profile
@@ -259,20 +260,26 @@ The models used in the project can be found below:
 
 *user_profile* - Users can save their details to the profile and update details if they want. Password, username and email address details are set when users register for the site. Delivery details are updated on the profile when users makes a purchase and checks the box to save those details provided to their profile.
 
-*order* - It includes order in full with delivery details on profile and order_line_items.
+- *order* 
+  - It includes order in full with delivery details on profile and order_line_items.
 
-*order_line_items* - It includes details of each product the user orders and details of each product are linked to the products section.
+- *order_line_items* 
+  - It includes details of each product the user orders and details of each product are linked to the products section.
 
-*products* - It includes all the information related to a product, including the product item image, name, price, SKU, description and category. Products on the shop are only addable by Superuser.
+- *products* 
+  - It includes all the information related to a product, including the product item image, name, price, description and category. Products on the shop are only addable by Superuser.
 
-*category* - Category model holds the categories which are selected in the product model. These categories are pre-set and can only be added or changed by a Superuser.
+- *category* 
+  - Category model holds the categories which are selected in the product model. These categories are pre-set and can only be added or changed by a Superuser.
 
-*blog* - Blogs are non-relational to the rest of the database, and they holds details of the blog posts including the blog title, poster, status, image and the post content. The blog post can only be added by a Superuser.
+- *blog* 
+  - Blogs are non-relational to the rest of the database, and they holds details of the blog posts including the blog title, poster, status, image and the post content. The blog post can only be added by a Superuser.
 
-*blog comment* - The blog comments are created in a way when user is logged in, the email section will be prefilled because it is linked to their account. The model of a comment requires a name, comment body, date it was created and the active status. Superuser is the only who can approve the comments by selecting "Publish" or "Draft".
+- *blog comment* 
+  - The blog comments are created in a way when user is logged in, the email section will be prefilled because it is linked to their account. The model of a comment requires a name, comment body, date it was created and the active status. Superuser is the only who can approve the comments by selecting "Publish" or "Draft".
 
 
-  #### [Back to Contents](#contents)
+#### [Back to Contents](#contents)
 <br>
 
 
@@ -280,35 +287,56 @@ The models used in the project can be found below:
 
 ### Existing Features
 
-* Navigation bar - The navigation bar is divided into 3 section. First is website links which will guide users throughtout the website. The second is the title of the company, which in the same time is a home button. Third section is My Account and Shopping bag. Under My Account, users can login/ register or they can even visit their profile. If the user is Superuser, they have the option to manage products.
+- Navigation bar 
+  - The navigation bar is divided into 3 section. First is website links which will guide users throughtout the website. The second is the title of the company, which in the same time is a home button. Third section is My Account and Shopping bag. Under My Account, users can login/ register or they can even visit their profile. If the user is Superuser, they have the option to manage products.
 
-* FAQ - This section will give users answers to most commonly asked questions. The aim of this web page is to lower the incoming contact to our customer support team, by simply replying to questions they might want to ask our company.
+- FAQ 
+  - This section will give users answers to most commonly asked questions. The aim of this web page is to lower the incoming contact to our customer support team, by simply replying to questions they might want to ask our company.
 
-* Contact - If by any chance users have more detailed or specific questions, they have the option to contact our team directly by simply sending us a message via Contact page. Contact page has been created with Django app therefore automatic message will be sent once they contact us, advising that we will get back to them asap.
+- Contact 
+  - If by any chance users have more detailed or specific questions, they have the option to contact our team directly by simply sending us a message via Contact page. Contact page has been created with Django app therefore automatic message will be sent once they contact us, advising that we will get back to them asap.
 
-* Blog - Blog is a page created for interactivity on the website. As most PC connected companies, we want to give some advices to users or PC enthusiasts whether how to build a PC from scratch, or the best way to apply thermal paste.
+- Blog 
+  - Blog is a page created for interactivity on the website. As most PC connected companies, we want to give some advices to users or PC enthusiasts whether how to build a PC from scratch, or the best way to apply thermal paste.
 
-* Comments - Every posted blog has the luxury of comments. To share knowledge, users can post a comment with their ideas or even express different opinions. It is open to everybody therefore superuser will have the option to leave comment in draft or to approve it.
+- Comments 
+  - Every posted blog has the luxury of comments. To share knowledge, users can post a comment with their ideas or even express different opinions. It is open to everybody therefore superuser will have the option to leave comment in draft or to approve it.
 
-* Shop - Shop will show all the products we have to offer. Users can click on the picture or name of the product, and bring a special product detail page which contains indepth information about that particular product.
+- Shop 
+  - Shop will show all the products we have to offer. Users can click on the picture or name of the product, and bring a special product detail page which contains indepth information about that particular product.
 
-* Search - I added a search bar to the website and gave the users availablity to search for their particular product either by name or description. I added search bar within the navigation bar, hence making navigation througout the website simpler.
+- Search 
+  - I added a search bar to the website and gave the users availablity to search for their particular product either by name or description. I added search bar within the navigation bar, hence making navigation througout the website simpler.
 
-* Delete/Edit/Update/Add ( Only for superuser) - Options mentioned are provided ONLY for superuser of this website. Superuser can manage all the products on the website and media files as well. Moreover, superuser can even delete comments and add new Blog content.
+- Delete/Edit/Update/Add ( Only for superuser) 
+  - Options mentioned are provided ONLY for superuser of this website. Superuser can manage all the products on the website and media files as well. Moreover, superuser can even delete comments and add new Blog content.
 
 
 
 ### Features Left to Implement
 
-* FAQ app Django design - Due to lack of time, I created FAQ page with HTML and CSS. The future plan of this website is to create FAQ specifically with Django app, hence making updating of this section much easier. IT world is changing more day by day, therefore we might need to add more FAQ or even change some.
+- FAQ app Django design 
+  - Due to lack of time, I created FAQ page with HTML and CSS. The future plan of this website is to create FAQ specifically with Django app, hence making updating of this section much easier. IT world is changing more day by day, therefore we might need to add more FAQ or even change some.
 
-* Remove/Delete Button - I am planing to add a question pop-up on delete button. Now, if superuser wants to delete an item it will be done immediately by pressing delete. I am planing to add a confirmation of delete simply as a protection as superuser might clicks remove on the wrong product.
+- Remove/Delete Button 
+  - I am planing to add a question pop-up on delete button. Now, if superuser wants to delete an item it will be done immediately by pressing delete. I am planing to add a confirmation of delete simply as a protection as superuser might clicks remove on the wrong product.
 
-* Subscribe - To keep users in line with our new items, I am planing to add subscribe button which will automatically send subscribed users our new products in the shop.
+- Subscribe 
+  - To keep users in line with our new items, I am planing to add subscribe button which will automatically send subscribed users our new products in the shop.
 
-* Back to Top - My first idea was to add "Back to top" button on the website, but this was not required as my navigation bar is sticky. In the future, Once the shop is expanded, back to top button will be added.
+- Back to Top 
+  - My first idea was to add "Back to top" button on the website, but this was not required as my navigation bar is fixed. In the future, Once the shop is expanded, back to top button will be added.
 
-  #### [Back to Contents](#contents)
+
+### Removed Features
+
+- SKU:
+  - I added SKU with UUID and unique characters but later on decided to remove it. I believe SKU in not needed for this project and by using UUID, I was facing issues when adding products from "Add a Product" link. This will be implemented in the future expand of the website.
+
+- Back to Top:
+  - Button was added at the beginning of the project but I have removed it as navigation bar is fixed. Button has been added to "Features Left to Implement"
+
+#### [Back to Contents](#contents)
 <br>
 
 
@@ -330,12 +358,14 @@ This website has been tested on many different occasions. Besides manual testing
 
 ![Image](static/readme/testing-table.PNG)
 
----
- 
 Afterwards, more detailed testing has been implemented and I found (2) Issues. Full documentantion can be found below : 
 
 ![Image](static/readme/manual-testing.PNG)
 
+
+**Please note** - SKU has been removed later in the project as I was facing issues when adding products from "Add a Product" Page, therefore no issue reported in the testing section.
+
+---
 
 The **Payment section** has been tested on many occasions. Additionally, website has been tested via many cards following the [Stripe Documentation](https://stripe.com/docs/testing#cards)
 
@@ -460,7 +490,7 @@ email address, they will be taken to the homepage and be informed via a notifica
 To read full *User Stories* testing, click [here](static/readme/testing.pdf)
 
 
-  #### [Back to Contents](#contents)
+#### [Back to Contents](#contents)
 <br>
 
 
@@ -536,7 +566,6 @@ To read full *User Stories* testing, click [here](static/readme/testing.pdf)
 
 The website authentication is provided by Django App Allauth. <br>
 A user must follow the instructions on the ‘Register’ page (enter an email address, username and password) and then confirm their email address via the email they receive. Once this has been completed user can sign in to the website.
-
 #### [Back to Contents](#contents)
 
 
@@ -693,7 +722,6 @@ I have used AWS S3 Bucket to store my static files and following steps were take
 - Set the policy type to **"S3 Bucket Policy"**, the principal to **"*"**, the action to **"GetObject"** and add the ARN which can be found on the Bucket Policy Editor page
 - Add the statement and then generate the policy
 - Copy and paste the generated policy into the Bucket Policy Editor, adding a **"/*"** to the end of the resource key
-
 #### [Back to Contents](#contents)
 
 
