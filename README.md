@@ -363,7 +363,9 @@ Afterwards, more detailed testing has been implemented and I found (2) Issues. F
 ![Image](static/readme/manual-testing.PNG)
 
 
-**Please note** - SKU has been removed later in the project as I was facing issues when adding products from "Add a Product" Page, therefore no issue reported in the testing section.
+- **Please note** :
+  - The issue with "Save delivery information to my profile" is internal issue. I have been adviced to mention here that this issue can be found "Boutique Ado" project as well.
+  - SKU has been removed later in the project as I was facing issues when adding products from "Add a Product" Page, therefore no issue reported in the testing section.
 
 ---
 
