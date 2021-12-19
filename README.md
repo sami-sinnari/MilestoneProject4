@@ -1,6 +1,6 @@
 # Milestone 4 Project – TechArray
 
-TechArray website has been build as a final project with Code Institue. Knowledge used in this project has been mostly gained from the Code Academy.
+TechArray website has been build as a django Project. Knowledge used in this project has been mostly gained from the Code Academy.
 
 It is fully responsive website with full-stack functionality, focusing on being user-friendly. The website is a PC Components store.
 
